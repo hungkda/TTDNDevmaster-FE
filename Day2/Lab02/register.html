@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký thành viên</title>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Đăng ký thành viên</h1>
+    <form action="">
+        <table width="500px" align="center" cellpadding="5">
+            <tbody>
+                <tr>
+                    <td>Họ và tên</td>
+                    <td>
+                        <input type="text" name="hoTen" id="hoTen">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Tên đăng nhập</td>
+                    <td>
+                        <input type="text" name="tenDangNhap" id="tenDangNhap">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Mật khẩu</td>
+                    <td>
+                        <input type="password" name="password" id="password">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ảnh đại diện</td>
+                    <td>
+                        <input type="file" name="image" id="image">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Thư điện tử</td>
+                    <td>
+                        <input type="email" name="email" id="email">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Giới tính</td>
+                    <td>
+                        <input type="radio" name="gender" id="male" value="0">
+                        <label for="male">Nam</label>
+                        <input type="radio" name="gender" id="female" value="1">
+                        <label for="male">Nữ</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Sở thích</td>
+                    <td>
+                        <input type="checkbox" name="soThich" id="bongDa">
+                        <label for="bongDa">Bóng đá</label>
+                        <input type="checkbox" name="soThich" id="xemPhim">
+                        <label for="xemPhim">Xem phim</label>
+                        <br />
+                        <input type="checkbox" name="soThich" id="duLich">
+                        <label for="duLich">Du Lịch</label>
+                        <input type="checkbox" name="soThich" id="boi">
+                        <label for="boi">Bơi</label>
+                        <input type="checkbox" name="soThich" id="ngheNhac">
+                        <label for="ngheNhac">Nghe nhạc</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Quê quán</td>
+                    <td>
+                        <select name="que" id="que">
+                            <option value="">Chọn</option>
+                            <option value="hn">Hà Nội</option>
+                            <option value="bg">Bắc Giang</option>
+                            <option value="tpHCM">TP Hồ Chí Minh</option>
+                            <option value="cm">Cà Mau</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Địa chỉ</td>
+                    <td>
+                        <input type="text" name="diaChi" id="diaChi">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Số điện thoại</td>
+                    <td>
+                        <input type="tel" name="sdt" id="sdt">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Mô tả ngắn</td>
+                    <td>
+                        <textarea name="description" id="description" cols="30" rows="10"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="Đăng Ký">
+                        <input type="submit" value="Làm Lại">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+
+</html>
