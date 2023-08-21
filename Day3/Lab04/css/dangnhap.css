@@ -1,0 +1,60 @@
+:root{
+    background-color: #F0F2F5;
+}
+a {
+    text-decoration: none;
+}
+
+.full{
+    width: 98%;
+    padding: 14px 16px;
+    
+}
+
+#main {
+    margin: auto;
+    max-width: 500px;   
+}
+
+header{
+    text-align: center;
+    margin: auto;
+    max-width: 450px;
+}
+
+.logo {
+    
+    max-width: 300px;
+}
+
+header h2 {
+    font-size: 24px;
+}
+
+.form-login {
+   
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1),
+        0 8px 16px rgba(0, 0, 0, .1);
+    padding: 10px;
+}
+
+.submit {
+    background-color: blue;
+    color: #fff;
+    margin: 0px 20px;
+    cursor: pointer;
+}
+
+.btn-submit {
+    
+    background-color: rgb(45, 131, 45);
+    padding: 5px;
+}
+
+.btn-submit a{
+    margin: 0 5px;
+    background-color: rgb(45, 131, 45);
+    color: #fff;
+}

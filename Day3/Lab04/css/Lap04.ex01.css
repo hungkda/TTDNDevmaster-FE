@@ -1,0 +1,9 @@
+ul li {
+    color: blue;
+    list-style: inside;
+}
+
+ol li {
+    color: red; 
+    
+}

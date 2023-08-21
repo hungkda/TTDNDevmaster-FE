@@ -1,0 +1,87 @@
+nav ul,
+nav li,
+nav,
+nav a {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+}
+
+nav {
+    width: 100px;
+    height: 200px;
+    background: #4c4e5a;
+    border-radius: 5px;
+}
+
+nav ul li {
+    position: relative;
+    list-style: none;
+    float: left;
+    display: block;
+    height: 40px;
+    width: 100%;
+}
+
+nav ul li a {
+    text-decoration: none;
+    line-height: 28px;
+    display: block;
+    padding: 0 14px;
+    margin: 6px 0;
+    font-weight: bold;
+    font-size: 13px;
+    color: #f3f3f3;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 6);
+    border-bottom: 1px solid #393942;
+}
+
+nav ul li:last-child a {
+    border-right: none;
+}
+
+nav ul li:hover>a {
+
+    color: #8fed62;
+}
+
+.submenu {
+    visibility: hidden;
+    /* display: none; */
+    position: absolute;
+    top: 0px;
+    left: 100px;
+    width: 150px;
+    background: #1f2024;
+}
+
+.submenu li {
+    width: 100%;
+}
+
+ul li:hover>.submenu {
+    visibility: inherit;
+    height: auto;
+    /* display: block; */
+}
+
+.submenu li:last-child a {
+    border-bottom: none;
+}
+
+.sub-submenu {
+    visibility: hidden;
+    /* display: none; */
+    position: absolute;
+    top: 0px;
+    left: 150px;
+    width: 150px;
+    background: #1f2024;
+}
+
+.submenu li:hover>.sub-submenu {
+    visibility: inherit;
+    height: auto;
+    /* display: block; */
+}
