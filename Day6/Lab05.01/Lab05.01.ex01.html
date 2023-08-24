@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login form</title>
+    <script>
+        function check() {
+            if (myForm.name.value == "admin" && myForm.pass.value == "123") {
+                alert("Bạn đã đăng nhập thành công");
+            }
+            else (
+                alert("Sai thông tin đăng nhập")
+            )
+        }
+    </script>
+    <style>
+        form {
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="" name="myForm">
+        <h1>
+            LOGIN INFORMATION
+        </h1>
+        <div class="login-form">
+            <div class="name">
+                <label for="">User Name: </label>
+                <input type="text" name="name" id="">
+            </div>
+            <div class="pass">
+                <label for="">Password: </label>
+                <input type="password" name="pass" id="">
+            </div>
+            <div class="remember">
+                <input type="radio" name="" id="">
+                <label for="" name="remember">remember set</label>
+            </div>
+            <div class="btn">
+                <button onclick="check()">Login</button>
+                <input type="reset" value="Reset">
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>

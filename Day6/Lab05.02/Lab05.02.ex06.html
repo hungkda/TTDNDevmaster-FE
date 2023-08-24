@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var tongChan = 0;
+        var tongLe = 0;
+        var arr = [6, 4, 3, 6, 7, 4, 3, 22, 454, 53];
+
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 == 0) {
+                tongChan += arr[i]
+            }
+            else {
+                tongLe += arr[i]
+            }
+        }
+
+        document.write("Mảng của bạn là: ")
+        for (i = 0; i < arr.length; i++) {
+            document.write(arr[i] + " ")
+        }
+
+        document.write("<br>Tổng các số chẵn là: " + tongChan);
+        document.write("<br>Tổng các số lẻ là: " + tongLe);
+    </script>
+</body>
+
+</html>

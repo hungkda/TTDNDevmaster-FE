@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mảng</title>
+    <script>
+        var arr = new Array(5, 2, 4, 5, "2a")
+        function tinhTong(arr) {
+            var tong = 0;
+            for (i = 0; i < arr.length; i++) {
+                tong += arr[i];
+            }
+
+            return tong;
+        }
+    </script>
+</head>
+
+<body>
+    <script>
+        var t = tinhTong(arr);
+        document.write("<h2>Tổng các giá trị phần từ trong mảng là: " + t);
+    </script>
+</body>
+
+</html>

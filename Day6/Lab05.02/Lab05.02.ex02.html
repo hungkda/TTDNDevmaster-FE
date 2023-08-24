@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giải phương trình bậc 2</title>
+
+    <script>
+        function ptbac1(a, b) {
+            document.write("Nghiệm của phương trình là: " + (-b / a));
+        }
+
+        function ptbac2(a, b, c) {
+            var dental = (b * b) - (4 * a * c)
+            var kq = 0;
+            var kq2 = 0;
+            if (dental < 0) {
+                document.write("Phương trình vô nghiệm")
+            }
+            else if (dental == 0) {
+                kq = -b / (2 * a);
+                document.write("Phương trình có một nghiệm kép: x = " + kq);
+            }
+            else {
+                kq = (-b + Math.sqrt(dental)) / (2 * a);
+                kq2 = (-b - Math.sqrt(dental)) / (2 * a);
+                document.write("Phương trình có hai nghiệm x1 = " + kq + " và x2 = " + kq2);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <script>
+        var so_a = prompt("Bạn hãy nhập vào số a");
+        var so_b = prompt("Bạn hãy nhập vào số b");
+        var so_c = prompt("Bạn hãy nhập vào số c");
+        if (so_a == 0) {
+            if (so_b == 0) {
+                if (so_c == 0) {
+                    document.write("Phương trình có vô số nghiệm");
+                } else {
+                    document.write("Phường trình vô nghiệm")
+                }
+            } else {
+                ptbac1(so_b, so_c);
+            }
+        } else {
+            ptbac2(so_a, so_b, so_c);
+        }
+    </script>
+</body>
+
+</html>

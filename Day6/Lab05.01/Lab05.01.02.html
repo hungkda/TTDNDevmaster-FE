@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Độ tuổi chịu trách nhiệm hình sự</title>
+    <script>
+        function check() {
+            if (form.age.value < 18) {
+                alert("Bạn chưa đủ tuổi để chịu trách nhiệm hình sự");
+            }
+            else {
+                alert("Bạn " + form.name.value + " đã đủ tuổi");
+            }
+        }
+
+        function reset() {
+            form.age.value = null;
+            form.name.value = null;
+            form.name.focus();
+            return false;
+        }
+    </script>
+</head>
+
+<body>
+    <form action="" name="form">
+        <label for="">Enter Name</label>
+        <input type="text" name="name">
+        <label for="">Enter age</label>
+        <input type="number" name="age">
+        <div>
+            <button onclick="check()">Check</button>
+            <button onclick="reset()">Clear</button>
+        </div>
+    </form>
+</body>
+
+</html>
