@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Máy tính</title>
+    <style>
+        .display {
+            text-align: right;
+
+        }
+
+        input {
+            width: 98%;
+            height: 100%;
+        }
+
+        td {
+            height: 80px;
+        }
+    </style>
+
+    <script>
+        var number = "";
+        var pheptinh = "";
+        const getDisplay = (val) => {
+            num = document.getElementById("display").value;
+            document.getElementById("display").value = num + val;
+        }
+
+        const tinh = (val) => {
+            number = document.getElementById("display").value;
+            document.getElementById("display").value = "";
+            pheptinh = val;
+        }
+
+        const kq = () => {
+            ketqua = 0;
+            switch (pheptinh) {
+                case "+":
+                    ketqua = parseInt(number) + parseInt(document.getElementById("display").value);
+                    break;
+                case "-":
+                    ketqua = parseInt(number) - parseInt(document.getElementById("display").value);
+                    break;
+                case "*":
+                    ketqua = parseInt(number) * parseInt(document.getElementById("display").value);
+                    break;
+                case "/":
+                    ketqua = parseInt(number) / parseInt(document.getElementById("display").value);
+                    break;
+            }
+            document.getElementById("display").value = ketqua;
+        }
+
+        const reset = () => {
+            document.getElementById("display").value = "";
+            pheptinh = "";
+            number = "";
+        }
+    </script>
+</head>
+
+<body>
+    <table width="300px" border="1" align="center">
+        <tr>
+            <td colspan="4">
+                <input type="text" name="display" id="display" class="display">
+            </td>
+        </tr>
+        <tr>
+            <td><input type="button" value="1" name="num1" id="num1" onclick="getDisplay(this.value)"></td>
+            <td><input type="button" value="2" name="num2" id="num2" onclick="getDisplay(this.value)"></td>
+            <td><input type="button" value="3" name="num3" id="num3" onclick="getDisplay(this.value)"></td>
+            <td><input type="button" value="+" name="phepCong" id="phepCong" onclick="tinh(this.value)"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="4" name="num4" id="num4" onclick="getDisplay(this.value)"></td>
+            <td><input type="button" value="5" name="num5" id="num5" onclick="getDisplay(this.value)"></td>
+            <td><input type="button" value="6" name="num6" id="num6" onclick="getDisplay(this.value)"></td>
+            <td><input type="button" value="-" name="phepTru" id="phepTru" onclick="tinh(this.value)"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="7" name="num7" id="num7" onclick="getDisplay(this.value)"></td>
+            <td><input type="button" value="8" name="num8" id="num8" onclick="getDisplay(this.value)"></td>
+            <td><input type="button" value="9" name="num9" id="num9" onclick="getDisplay(this.value)"></td>
+            <td><input type="button" value="*" name="phepNhan" id="phepNhan*" onclick="tinh(this.value)"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="AC" name="ac" id="ac" onclick="reset()"></td>
+            <td colspan=" 2"> <input type="button" value="=" name="kq" id="num1" onclick="kq()">
+            </td>
+            <td><input type="button" value="/" name="phepChia" id="phepChia" onclick="tinh(this.value)"></td>
+        </tr>
+
+    </table>
+</body>
+
+</html>
