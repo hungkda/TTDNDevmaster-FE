@@ -36,18 +36,19 @@ header nav .menu{
     justify-content: space-between;
 }
 
-header nav .menu-item {
+header nav .menu-item a{
     position: relative;
     line-height: 2rem;
+    /* line-height: 2rem; */
 }
 
 header nav .selected::after,
-header nav .menu-item:hover::after {
+header nav .menu-item a:hover::after {
     content: "";
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: -0.5rem;
     background-color: #bd945f;
     height: 0.3rem;
     width: 60%;
@@ -120,7 +121,7 @@ main .product .container .category .category-item {
 }
 
 main .product .container .category .category-item img{
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
 
 }
@@ -133,6 +134,8 @@ main .product .container .category .category-item p {
 main .product .container .hot-product {
     padding: 3rem 0;
     text-align: center;
+    width: 90%;
+    margin: 0 auto;
 }
 
 main .product .container .hot-product h1{
@@ -153,14 +156,11 @@ main .product .container .hot-product h1::after {
     height: 0.4rem;
 }
 
-main .product .container .hot-product .list-hot-product{
-    width: 100%;
-    display: flex;
-    align-items: center;
+main .product .container .hot-product ul{
     margin-top: 3rem;
 }
 
-main .product .container .item-hot-product-btn {
+/* main .product .container .item-hot-product-btn {
     background-color: #bd945f;
     border-radius: 50%;
     width: 50px;
@@ -178,33 +178,39 @@ main .product .container .item-hot-product-btn:hover{
 
 main .product .container .item-hot-product-btn i {
     color: #fff;
+} */
+
+main .product .container .hot-product .item-hot-product img {
+    width: 80%;
+    margin: 0 auto;
 }
 
-main .product .container .hot-product .list-hot-product .item-hot-product{
-    
-    margin-right: 1rem;
-}
-
-main .product .container .hot-product .list-hot-product .item-hot-product img {
-    width: 100%;
-}
-
-main .product .container .hot-product .list-hot-product .item-hot-product h3{
+main .product .container .hot-product .item-hot-product h3{
     font-family: 'font-ultra';
         color: #2c2e53;
         margin-top: 1rem;
 }
 
-main .product .container .hot-product .list-hot-product .item-hot-product i {
+main .product .container .hot-product .item-hot-product i {
     color: #bd945f;
 }
 
-main .product .container .hot-product .list-hot-product .item-hot-product p {
+main .product .container .hot-product .item-hot-product p {
     font-size: 0.7rem;
 }
 
-main .product .container .hot-product .list-hot-product .item-hot-product .des {
+main .product .container .hot-product .item-hot-product .des {
     color: #6a6a6aa1 !important;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    font-size: 2.86rem;
+    color: #bd945f;
+}
+
+.slick-prev {
+    left: -3.21rem;
 }
 /* 3.aboutUs */
 main .aboutUs {
@@ -379,30 +385,29 @@ main .aboutUs .container .list-wCS-item p {
     width: 55%;
 }
 
-.news .container-news .main-news img{
-    width: 100%;
+.news .container-news .main-news div{
+    position: relative;
 }
 
-.news .container-news .main-news {
-    position: relative;
+.news .container-news .main-news img{
+    width: 100%;
+
 }
 
 .news .container-news .main-news .main-news-text {
     background-color: #bd945f;
     position: absolute;
-    bottom: -8%;
+    top: 70%;
 }
 
 .news .container-news .main-news .main-news-text h3{
     font-size: 1.5rem;
     color: #fff;
-    /* font-family: 'font-thin'; */
     padding: 1rem;
 }
 
 .news .container-news .main-news .main-news-text p {
-    padding: 1rem;
-    /* font-family: 'font-thin'; */
+    padding: 0 1rem 1rem 1rem;
 }
 
 .news .container-news .list-news {
@@ -414,7 +419,13 @@ main .aboutUs .container .list-wCS-item p {
 .news .container-news .list-news .list-news-item{
     display: flex;
     justify-content: space-between;
+    margin-top: 1rem;
 }
+
+.news .container-news .list-news .list-news-item:first-child {
+    margin-top: 0;
+}
+
 .news .container-news .list-news .list-news-item img {
     width: 32%;
 }
@@ -430,7 +441,7 @@ main .aboutUs .container .list-wCS-item p {
 
 .news .container-news .list-news .list-news-item .news-item-text p {
     font-size: 1rem;
-    padding: 1rem 0;
+    padding-top: 1rem;
 }
 
 .news .container-news .list-news a,
@@ -439,9 +450,8 @@ main .aboutUs .container .list-wCS-item p {
     font-size: 1.5rem;
 }
 
-.news .container-news .list-news a,
-.news .container-news .list-news a i {
-    padding-bottom: 3%;
+.news .container-news .list-news .more {
+    margin-top: 2rem;
 }
 
 .news .partner {
@@ -600,4 +610,38 @@ footer .contact ul li div img{
 
 footer .contact ul li:last-child div{
     width: 10rem;
+}
+
+
+
+/* reponsive */
+
+@media only screen and (max-width: 1200px) {
+    header nav .menu {
+            width: calc(9*100%/12);
+        }
+}
+
+@media only screen and (max-width: 1000px) {
+    header nav .menu {
+        display: none;
+    }
+    header {
+        position: relative;
+    }
+
+    header nav .responsive-menu {
+        display: block;
+        position: absolute;
+        right: 10%;
+        left: auto;
+        top: 60%;
+        width: 20%;
+        background-color: #bd945f;
+        z-index: 5;
+    }
+
+    .fa-bars {
+        display: block!important;
+    }
 }
