@@ -1,0 +1,104 @@
+/* reponsive */
+
+/* `xxl` applies to x-large devices (large desktops, less than 1400px) */
+@media (max-width: 1399.98px) {}
+
+/* `xl` applies to large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+    header nav .menu {
+        width: calc(9*100%/12);
+    }
+
+}
+
+/* `lg` applies to medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+    header nav {
+        flex-direction: column;
+        width: 100%;
+        padding-left: 0;
+        padding-bottom: 0;
+        padding-right: 0;
+    }
+
+    header nav .menu {
+        display: none;
+    }
+
+    header .logo {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        align-items: center;
+    }
+
+    header .logo img {
+        width: 10% !important;
+        padding-bottom: 1rem;
+    }
+
+    header nav .responsive-menu {
+        margin-top: 0.5rem;
+        display: block;
+        width: 100%;
+        background-color: #bd945f;
+        animation: xx 300ms ease-in-out;
+        transform-origin: top center;
+    }
+
+    header nav .responsive-menu>.menu-item {
+
+        animation: yy 800ms ease-in-out;
+        transform-origin: left;
+        /* animation-delay: 500ms; */
+    }
+
+    header nav .responsive-menu .menu-item {
+        padding: 0 2rem;
+    }
+
+    header nav .responsive-menu .menu-item a {
+        color: #f3f3f3;
+        border-bottom: 1px solid #f3f3f3;
+        display: block;
+        line-height: 3.2rem;
+    }
+
+    header nav .responsive-menu .menu-item:last-child a {
+        border-bottom: none !important;
+    }
+
+    .fa-bars {
+        display: block !important;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    @keyframes xx {
+        0% {
+            transform: rotateX(-90deg);
+        }
+
+        100% {
+            transform: rotateX(0deg);
+        }
+    }
+
+    @keyframes yy {
+        0% {
+            transform: rotateY(-90deg);
+        }
+
+        100% {
+            transform: rotateY(0deg);
+        }
+    }
+}
+
+/* `md` applies to small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {}
+
+/* `sm` applies to x-small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {}

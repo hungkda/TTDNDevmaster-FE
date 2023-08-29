@@ -614,7 +614,11 @@ footer .contact ul li:last-child div{
 
 /* reponsive */
 
-@media only screen and (max-width: 1200px) {
+/* `xxl` applies to x-large devices (large desktops, less than 1400px) */
+@media (max-width: 1399.98px) {}
+
+/* `xl` applies to large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
     header nav .menu {
         width: calc(9*100%/12);
     }
@@ -656,10 +660,10 @@ footer .contact ul li:last-child div{
     .container-news .list-news .list-news-item img {
         width: 100% !important;
     }
-
 }
 
-@media only screen and (max-width: 1000px) {
+/* `lg` applies to medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
     header nav {
         flex-direction: column;
         width: 100%;
@@ -672,14 +676,14 @@ footer .contact ul li:last-child div{
         display: none;
     }
 
-    header .logo{
+    header .logo {
         display: flex;
         justify-content: space-between;
         width: 90%;
         align-items: center;
     }
 
-    header .logo img{
+    header .logo img {
         width: 10% !important;
         padding-bottom: 1rem;
     }
@@ -693,9 +697,9 @@ footer .contact ul li:last-child div{
         transform-origin: top center;
     }
 
-    header nav .responsive-menu>.menu-item{
-        
-        animation: yy 800ms ease-in-out ;
+    header nav .responsive-menu>.menu-item {
+
+        animation: yy 800ms ease-in-out;
         transform-origin: left;
         /* animation-delay: 500ms; */
     }
@@ -704,19 +708,19 @@ footer .contact ul li:last-child div{
         padding: 0 2rem;
     }
 
-    header nav .responsive-menu .menu-item a{
+    header nav .responsive-menu .menu-item a {
         color: #f3f3f3;
         border-bottom: 1px solid #f3f3f3;
         display: block;
         line-height: 3.2rem;
     }
 
-    header nav .responsive-menu .menu-item:last-child a{
+    header nav .responsive-menu .menu-item:last-child a {
         border-bottom: none !important;
     }
 
     .fa-bars {
-        display: block!important;
+        display: block !important;
     }
 
     .container {
@@ -727,19 +731,34 @@ footer .contact ul li:last-child div{
         0% {
             transform: rotateX(-90deg);
         }
+
         100% {
             transform: rotateX(0deg);
         }
     }
 
-        @keyframes yy {
-            0% {
-                transform: rotateY(-90deg);
-            }
-    
-            100% {
-                transform: rotateY(0deg);
-            }
+    @keyframes yy {
+        0% {
+            transform: rotateY(-90deg);
         }
 
+        100% {
+            transform: rotateY(0deg);
+        }
+    }
 }
+
+/* `md` applies to small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {}
+
+/* `sm` applies to x-small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+
+}
+
+
+
+
+
+
+

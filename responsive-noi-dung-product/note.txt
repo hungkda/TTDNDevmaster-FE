@@ -1,0 +1,37 @@
+Tước khi thiết kế phải phân tích
+Làm phần layout trước ( header và footer)
+---------------------
+Cho footer xuống dưới để dễ nhìn
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+footer{
+    margin-top: auto;
+}
+--------------------
+giúp ảnh ở trong hết ko mất ảnh
+    object-fit: contain;
+giúp ảnh zoom lên vừa đủ thẻ cha
+    object-fit: cover;
+--------------------
+cách để có đường kẻ ngang ở dưới
+//pseduo element 
+footer .title {
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+footer .title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    height: 0.2rem;
+    width: 5rem;
+}
+
+nếu background khác nhau, chia các phần nhờ background
