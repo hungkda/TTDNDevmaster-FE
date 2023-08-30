@@ -89,11 +89,13 @@ main .banner .container .introduction p {
 main .banner .container .introduction button {
     border: none;
     background-color: #bd945f;
-    color: #fff;
     padding: 1rem 2rem;
     font-family: 'font-ultra';
 }
 
+main .banner .container .introduction button a{
+    color: #fff;
+}
 /*2. product */
 main .product{
         background-color: #f3f3f3;
@@ -160,25 +162,6 @@ main .product .container .hot-product ul{
     margin-top: 3rem;
 }
 
-/* main .product .container .item-hot-product-btn {
-    background-color: #bd945f;
-    border-radius: 50%;
-    width: 50px;
-    height: 38px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 1rem ;
-}
-
-main .product .container .item-hot-product-btn:hover{
-    background-color: #705838;
-}
-
-main .product .container .item-hot-product-btn i {
-    color: #fff;
-} */
 
 main .product .container .hot-product .item-hot-product img {
     width: 80%;
@@ -271,6 +254,12 @@ main .aboutUs .container .content {
 main .aboutUs .container .about-content,
 main .aboutUs .container .img-content {
     width: 49%;
+}
+
+main .aboutUs .container .about-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 main .aboutUs .container .img-content img {
@@ -619,11 +608,24 @@ footer .contact ul li:last-child div{
 
 /* `xl` applies to large devices (desktops, less than 1200px) */
 @media (max-width: 1199.98px) {
+    * {
+            font-size: 12px;
+        }
     header nav .menu {
         width: calc(9*100%/12);
     }
 
+    .container {
+        width: calc(9*100%/12) !important;
+    }
+
     /* main */
+
+    /* banner */
+    .banner>.container {
+        width: 100% !important;
+    }
+
     /* news  */
     .container-news {
         flex-direction: column;
@@ -660,10 +662,16 @@ footer .contact ul li:last-child div{
     .container-news .list-news .list-news-item img {
         width: 100% !important;
     }
+
+    .form-contact form img {
+        width: 15%;
+        bottom: 60%;
+    }
 }
 
 /* `lg` applies to medium devices (tablets, less than 992px) */
 @media (max-width: 991.98px) {
+    
     header nav {
         flex-direction: column;
         width: 100%;
@@ -746,14 +754,188 @@ footer .contact ul li:last-child div{
             transform: rotateY(0deg);
         }
     }
+
+    /* aboutUS  */
+        main .aboutUs .container .content {
+            flex-direction: column;
+            justify-content: center;
+        }
+    
+        main .aboutUs .container .about-content,
+        main .aboutUs .container .img-content {
+            width: 90%;
+            margin: 0 auto;
+        }
+    
+        main .aboutUs .container .about-content {
+            margin-top: 1rem;
+            text-align: center;
+    
+        }
+    
+        main .aboutUs .container .list-wCS-item {
+            width: 90%;
+            margin: 1rem auto
+        }
+
 }
 
 /* `md` applies to small devices (landscape phones, less than 768px) */
-@media (max-width: 767.98px) {}
+@media (max-width: 767.98px) {
+    /* banner */
+    .banner .introduction h1{
+        font-size: 22.5px !important;
+    }
+    .banner .introduction p{
+        font-size: 9px !important;
+    }
+
+    main .banner .container .introduction p {
+        width: 60%;
+        margin: 0;
+    }
+
+    /* product */
+    main .product .container .category {
+        display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+    }
+    main .product .container .category .category-item {
+        width: 30%;
+        margin-bottom: 2rem;
+    }
+
+    /* aboutUS  */
+    
+}
 
 /* `sm` applies to x-small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
+    * {
+        font-size: 8px !important;
+    }
+    /* banner */
+    main .banner .container .introduction {
+        text-align: center;
+    }
+    main .banner .container .introduction p {
+        width: 100%;
+        margin: 0.5rem 0;
+        text-align: center;
+    }
+        .banner .introduction h1 {
+            font-size: 21.5px !important;
+        }
 
+    main .banner .container .introduction button {
+        border: none;
+        background-color: #bd945f;
+        color: #fff;
+        padding: 0.5rem 1rem;
+        font-family: 'font-ultra';
+    }
+
+    /* product */
+    main .product .container .category {
+        margin-top: -2rem !important    ;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    
+    main .product .container .category .category-item {
+        width: 45%;
+        margin-bottom: 2rem;
+    }
+    /* news  */
+    .container-news .list-news {
+        flex-direction: column !important;
+        width: 100% !important;
+    }
+
+    .container-news .list-news .list-news-item {
+        flex-direction: row;
+        margin-top: 1rem !important;
+        width: 100% !important;
+    }
+    .news .container-news .list-news .list-news-item img {
+        width: 30% !important;
+    }
+
+    .container-news .list-news .list-news-item .news-item-text {
+        width: 62% !important;
+        margin-top: 1rem;
+    }
+
+
+    .container-news .list-news .more {
+        width: 100% !important;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .container-news .list-news .list-news-item img {
+        width: 100% !important;
+    }
+
+    .form-contact form img {
+        width: 15%;
+        bottom: 60%;
+    }
+
+    /* form-contact */
+    .form-contact .container {
+        flex-direction: column;
+        
+    }
+
+    .form-contact form img {
+        width: 20%;
+
+        bottom: 60%;
+    }
+
+    .form-contact .contact-text,
+    .form-contact .contact-form-input {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .form-contact .contact-text {
+        display: flex;
+        justify-content: center;
+    }
+    .form-contact .contact-text::after {
+        content: "";
+        position: absolute;
+        bottom: -5%;
+        left: 55%;
+        width: 14%;
+        background-color: #fff;
+        height: 0.4rem;
+    }
+
+    .form-contact .contact-form-input {
+        margin-top: 1rem;
+    }
+
+    .form-contact .contact-form-input .input {
+        justify-content: space-evenly;
+    }
+
+    .form-contact .input button {
+        margin-right: 0;
+    }
+
+    footer .container {
+        flex-direction: column;
+    }
+
+    footer .container .aboutUs,
+    footer .container .contact {
+        margin-top: 1rem;
+    }
 }
 
 

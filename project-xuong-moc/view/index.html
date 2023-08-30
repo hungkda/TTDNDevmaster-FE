@@ -40,13 +40,13 @@
                     <a href="../view/product.html">SẢN PHẨM</a>
                 </li>
                 <li class="menu-item">
-                    <a href="#">TIN TỨC</a>
+                    <a href="../view/news.html">TIN TỨC</a>
                 </li>
                 <li class="menu-item">
-                    <a href="#">ĐỐI TÁC</a>
+                    <a href="../view/partner.html">ĐỐI TÁC</a>
                 </li>
                 <li class="menu-item">
-                    <a href="#">LIÊN HỆ</a>
+                    <a href="../view/contact.html">LIÊN HỆ</a>
                 </li>
             </ul>
 
@@ -66,7 +66,7 @@
                     <h1 style="color: #bd945f;">HOÀNG HOAN</h1>
                     <p>Sứ mệnh của chúng tôi là kết hợp hài hòa giữa ý tưởng và mong muốn của khách hàng, đem lại những
                         phút giây thư giãn tuyệt vời bên gia đình và những người thấn yêu</p>
-                    <button>LIÊN HỆ NGAY</button>
+                    <button><a href="../view/contact.html">LIÊN HỆ NGAY</a></button>
                 </div>
             </div>
         </section>
@@ -115,7 +115,7 @@
                         SẢN PHẨM NỔI BẬT
                     </h1>
 
-                    <ul class="slide-product" data-slick='{"slidesToShow": 4, "slidesToScroll": 4}'>
+                    <ul class="slide-product">
                         <li class="item-hot-product">
                             <a href="">
                                 <img src="../images/san-pham-noi-bat/sp-1.jpg" alt="">
@@ -213,8 +213,7 @@
                             <p>
                                 Sứ mệnh của chúng tôi là kết hợp hài hòa giữa ý tưởng và mong muốn của khách hàng, đem
                                 lại những phút giây thư giãn tuyệt vời bên gia đình và những người thấn yêu. Sứ mệnh của
-                                chúng tôi là kết hợp hài hòa giữa ý tưởng và mong muốn của khách hàng, đem
-                                lại n
+                                chúng
                             </p>
                             <ul class="list-about">
                                 <li class="list-about-item"><img src="../images/ve-chung-toi/ve-chung-toi-1.jpg" alt="">
@@ -224,7 +223,7 @@
                                 <li class="list-about-item"><img src="../images/ve-chung-toi/ve-chung-toi-3.jpg" alt="">
                                 </li>
                                 <li class="list-about-item">
-                                    <a href="">
+                                    <a href="../view/product.html">
                                         <img src="../images/ve-chung-toi/ve-chung-toi-4.jpg" alt="">
                                         <p class="more">Xem thêm &gt;</p>
                                     </a>
@@ -327,7 +326,7 @@
                                 </div>
                             </div>
                             <div class="more">
-                                <a href="">Xem thêm
+                                <a href="../view/news.html">Xem thêm
                                     <i class="fa-solid fa-arrow-right"></i>
                                 </a>
                             </div>
@@ -360,7 +359,7 @@
                 <div class="container">
                     <div class="contact-text">
                         <p>
-                            Trải nghiệm dịch vụ
+                            Trải nghiệm dịch vụ &nbsp;
                         </p>
                         <p class="bold">
                             cùng Hoàng Hoan ngay
@@ -407,13 +406,13 @@
                         <a href="../view/product.html">Sản phẩm</a>
                     </li>
                     <li>
-                        <a href="">Tin tức</a>
+                        <a href="../view/news.html">Tin tức</a>
                     </li>
                     <li>
-                        <a href="">Đối tác</a>
+                        <a href="../view/partner.html">Đối tác</a>
                     </li>
                     <li>
-                        <a href="">Liên hệ</a>
+                        <a href="../view/contact.html">Liên hệ</a>
                     </li>
                 </ul>
             </div>
@@ -451,7 +450,44 @@
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script>
         $(document).ready(function () {
-            $('.slide-product').slick();
+            $('.slide-product').slick({
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 1,
+                            autoplay: true,
+                            autoplaySpeed: 2000,
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1,
+                            autoplay: true,
+                            autoplaySpeed: 2000,
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            autoplay: true,
+                            autoplaySpeed: 2000,
+                        }
+                    }
+                    // You can unslick at a given breakpoint now by adding:
+                    // settings: "unslick"
+                    // instead of a settings object
+                ]
+            });
         });
         const handleClickMenu = () => {
             document.querySelector(".menu").classList.toggle("responsive-menu")

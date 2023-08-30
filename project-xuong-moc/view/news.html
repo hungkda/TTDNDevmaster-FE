@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tin tức</title>
+
+    <!-- font-awesome  -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/news.css">
+</head>
+
+<body>
+    <!-- BEGIN: Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="../images/logo.png" alt="Logo" style="width: 80%;">
+                <i class="fa-solid fa-bars" style="display: none;" onclick="handleClickMenu()"></i>
+            </div>
+            <ul class="menu">
+                <li class="menu-item">
+                    <a href="../view/index.html">TRANG CHỦ</a>
+                </li>
+                <li class="menu-item">
+                    <a href="../view/introduction.html">GIỚI THIỆU</a>
+                </li>
+                <li class="menu-item">
+                    <a href="../view/product.html">SẢN PHẨM</a>
+                </li>
+                <li class="menu-item">
+                    <a class="selected" href="../view/news.html">TIN TỨC</a>
+                </li>
+                <li class="menu-item">
+                    <a href="../view/partner.html">ĐỐI TÁC</a>
+                </li>
+                <li class="menu-item">
+                    <a href="../view/contact.html">LIÊN HỆ</a>
+                </li>
+            </ul>
+
+        </nav>
+    </header>
+    <!-- END: Header -->
+
+    <!-- BEGIN: main -->
+    <main>
+        <section id="news">
+            <div class="container">
+                <p class="title">
+                    TIN TỨC
+                </p>
+                <div class="main-news">
+                    <ul class="list-news">
+                        <li class="news-item">
+                            <img src="../images/tin-tuc/tintuc-1.png" alt="">
+                            <div class="news-item-text">
+                                <p class="title-text">NGẤT NGÂY VỚI TOP 10 MẪU NỘI THẤT CHUNG CƯ 1 PHÒNG NGỦ ĐẸP</p>
+                                <p class="des">Những căn hộ chung cư mini, có diện tích nhỏ ngày càng trở nên nên ưa
+                                    chuộng hơn trong cuộc sống hiện đại với những ai có khoản kinh phí "hạn hẹp".</p>
+                            </div>
+                        </li>
+                        <li class="news-item">
+                            <img src="../images/tin-tuc/tintuc-2.png" alt="">
+                            <div class="news-item-text">
+                                <p class="title-text">25+ MẪU GIƯỜNG NGỦ HỘC KÉO THÔNG MINH CHO CĂN PHÒNG BẠN</p>
+                                <p class="des">Sự thật là chúng ta dành hết 1/3 cuộc đời chỉ để ngủ, vì thế việc tạo
+                                    được một giấc ngủ ngon là một điều đặc biệt quan trọng.</p>
+                            </div>
+                        </li>
+                        <li class="news-item">
+                            <img src="../images/tin-tuc/tintuc-3.png" alt="">
+                            <div class="news-item-text">
+                                <p class="title-text">TUYỆT CHIÊU THIẾT KẾ CHUNG CƯ MINI 2 PHÒNG NGỦ SIÊU ĐẸP</p>
+                                <p class="des">Độ tuổi khởi nghiệp và tự lập ngày càng trẻ hóa trong xã hội hiện đại
+                                    thời nay, thế nên việc “thiết kế căn hộ chung cư mini 2 phòng ngủ”</p>
+                            </div>
+                        </li>
+                        <li class="news-item">
+                            <img src="../images/tin-tuc/tintuc-1.png" alt="">
+                            <div class="news-item-text">
+                                <p class="title-text">NGẤT NGÂY VỚI TOP 10 MẪU NỘI THẤT CHUNG CƯ 1 PHÒNG NGỦ ĐẸP</p>
+                                <p class="des">Những căn hộ chung cư mini, có diện tích nhỏ ngày càng trở nên nên ưa
+                                    chuộng hơn trong cuộc sống hiện đại với những ai có khoản kinh phí "hạn hẹp".</p>
+                            </div>
+                        </li>
+                        <li class="news-item">
+                            <img src="../images/tin-tuc/tintuc-2.png" alt="">
+                            <div class="news-item-text">
+                                <p class="title-text">25+ MẪU GIƯỜNG NGỦ HỘC KÉO THÔNG MINH CHO CĂN PHÒNG BẠN</p>
+                                <p class="des">Sự thật là chúng ta dành hết 1/3 cuộc đời chỉ để ngủ, vì thế việc tạo
+                                    được một giấc ngủ ngon là một điều đặc biệt quan trọng.</p>
+                            </div>
+                        </li>
+                        <li class="news-item">
+                            <img src="../images/tin-tuc/tintuc-3.png" alt="">
+                            <div class="news-item-text">
+                                <p class="title-text">TUYỆT CHIÊU THIẾT KẾ CHUNG CƯ MINI 2 PHÒNG NGỦ SIÊU ĐẸP</p>
+                                <p class="des">Độ tuổi khởi nghiệp và tự lập ngày càng trẻ hóa trong xã hội hiện đại
+                                    thời nay, thế nên việc “thiết kế căn hộ chung cư mini 2 phòng ngủ”</p>
+                            </div>
+                        </li>
+                        <li class="news-item">
+                            <img src="../images/tin-tuc/tintuc-1.png" alt="">
+                            <div class="news-item-text">
+                                <p class="title-text">NGẤT NGÂY VỚI TOP 10 MẪU NỘI THẤT CHUNG CƯ 1 PHÒNG NGỦ ĐẸP</p>
+                                <p class="des">Những căn hộ chung cư mini, có diện tích nhỏ ngày càng trở nên nên ưa
+                                    chuộng hơn trong cuộc sống hiện đại với những ai có khoản kinh phí "hạn hẹp".</p>
+                            </div>
+                        </li>
+                        <li class="news-item">
+                            <img src="../images/tin-tuc/tintuc-2.png" alt="">
+                            <div class="news-item-text">
+                                <p class="title-text">25+ MẪU GIƯỜNG NGỦ HỘC KÉO THÔNG MINH CHO CĂN PHÒNG BẠN</p>
+                                <p class="des">Sự thật là chúng ta dành hết 1/3 cuộc đời chỉ để ngủ, vì thế việc tạo
+                                    được một giấc ngủ ngon là một điều đặc biệt quan trọng.</p>
+                            </div>
+                        </li>
+                        <li class="news-item">
+                            <img src="../images/tin-tuc/tintuc-3.png" alt="">
+                            <div class="news-item-text">
+                                <p class="title-text">TUYỆT CHIÊU THIẾT KẾ CHUNG CƯ MINI 2 PHÒNG NGỦ SIÊU ĐẸP</p>
+                                <p class="des">Độ tuổi khởi nghiệp và tự lập ngày càng trẻ hóa trong xã hội hiện đại
+                                    thời nay, thế nên việc “thiết kế căn hộ chung cư mini 2 phòng ngủ”</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="page">
+                    <ul class="list-page">
+                        <li class="page-item selected">1</li>
+                        <li class="page-item">2</li>
+                        <li class="page-item">3</li>
+                        <li class="page-item">4</li>
+                        <li class="page-item">5</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- END: main -->
+
+    <!-- BEGIN: Footer -->
+    <footer>
+        <div class="container">
+            <div class="info">
+                <div class="title">
+                    THÔNG TIN CHUNG
+                </div>
+                <ul class="list-info">
+                    <li style="font-size: 1.2rem; font-family: 'font-medium' ;">CÔNG TY TNHH HOÀNG HOAN</li>
+                    <li><i class="fa-solid fa-phone">&nbsp;</i>0.999.999.99</li>
+                    <li><i class="fa-regular fa-envelope"></i>&nbsp;cskh@meocon.com</li>
+                    <li><i class="fa-solid fa-location-dot"></i>&nbsp;Nguyễn Trãi, Hà Nội</li>
+                </ul>
+            </div>
+
+            <div class="aboutUs">
+                <div class="title">
+                    VỀ CHÚNG TÔI
+                </div>
+                <ul class="list-pages">
+                    <li>
+                        <a href="../view/introduction.html">Giới thiệu</a>
+                    </li>
+                    <li>
+                        <a href="../view/product.html">Sản phẩm</a>
+                    </li>
+                    <li>
+                        <a href="../view/news.html">Tin tức</a>
+                    </li>
+                    <li>
+                        <a href="../view/partner.html">Đối tác</a>
+                    </li>
+                    <li>
+                        <a href="../view/contact.html">Liên hệ</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="contact">
+                <div class="title">
+                    KẾT NỐI VỚI CHÚNG TÔI
+                </div>
+                <ul class="">
+                    <li>
+                        <div>
+                            <img src="../images/facebook.png" alt="">
+                        </div>
+                        <div>
+                            <img src="../images/zalo.png" alt="">
+                        </div>
+                        <div>
+                            <img src="../images/mail.png" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="../images/xacnhan-bocongthong.png" alt="">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- END: Footer -->
+
+    <!-- slick -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        const handleClickMenu = () => {
+            document.querySelector(".menu").classList.toggle("responsive-menu")
+        }
+    </script>
+
+</body>
+
+</html>

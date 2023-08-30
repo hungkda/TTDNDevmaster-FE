@@ -51,111 +51,70 @@ header nav .menu-item a:hover::after {
     width: 60%;
 }
 
-/* banner */
+/* main  */
 #banner {
-    background-image: url(../images/san-pham/banner.png);
+    background-image: url(../images/lien-he/banner.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: top center;
-    height: 450px;
-}
-.container-banner{
-    width: calc(1200%/18);
-    margin: 0 auto;
+    background-position: bottom center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-end;
-    height: 100%;
+    align-items: center;
+    height: 450px;
+    z-index: 1;
+    position: relative;
 }
-#banner .line1{
-    color: #ba9759;
+
+#banner img {
+    width: 10%;
+}
+
+#banner h1 {
+    font-family: 'font-ultra';
     font-size: 3rem;
+    color: #fff;
+    margin-top: 1rem;
 }
 
-#banner .line2 {
-    color: #2c2e53;
-    font-size: 2.5rem;
-}
-
-/* product */
-#product {
-    padding: 3rem 0;
+/* content */
+#content {
     background-color: #f3f3f3;
+    padding-bottom: 5rem;
 }
 
-.container {
+#content .container {
     width: calc(12*100%/18);
     margin: 0 auto;
-    padding: 2rem 0;
     background-color: #fff;
-    margin-top: 3rem;
-}
-#product .text {
-    width: calc(11*100%/12);
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-}
-
-#product .text .title {
-    font-family: 'font-ultra';
-    font-size: 1.5rem;
-    color: #2c2e53;
+    margin-top: -3rem;
     position: relative;
-    line-height: 3rem;
+    z-index: 2;
+    padding: 3rem 0;
+    display: flex;
+    justify-content: space-evenly;
 }
 
-#product .text .title::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    width: 60%;
-    bottom: 0;
-    background-color: #bd945f;
-    height: 0.4rem;
+#content .container img {
+    width: calc((400%/12));
 }
 
-#product .text .all {
-    color: #2c2e53;
-
+#content .container .form {
+    width: calc((500%/12));
 }
 
-#product .list-product {
-    margin: 0 auto;
-    margin-top: 1rem;
-    display: flex; 
-    flex-wrap: wrap;
-    width: calc(11*100%/12);
-    justify-content: space-between;
-}
-
-#product .list-product .product-item {
-    width: 22%;
-    text-align: center;
-}
-
-#product .list-product .product-item img{
-    width: 100%;
-}
-
-#product .list-product .product-item h3 {
-    font-family: 'font-ultra';
-    color: #2c2e53;
-    margin-top: 1rem;
-}
-
-#product .list-product .product-item i {
+#content .container .title-item {
+    font-size: 1.5rem;
     color: #bd945f;
+    margin-bottom: 1rem;
 }
 
-#product .list-product .product-item p {
-    font-size: 0.8rem;
+#content .container .item {
+    
 }
 
-#product .list-product .product-item .des {
-    color: #6a6a6aa1 !important;
+#content .container .item input {
+    padding: 1rem;
 }
 
 /* footer */
@@ -224,6 +183,7 @@ footer .contact ul li:last-child div {
     width: 10rem;
 }
 
+
 /* reponsive */
 
 /* `xxl` applies to x-large devices (large desktops, less than 1400px) */
@@ -244,16 +204,19 @@ footer .contact ul li:last-child div {
     }
 
     /* main */
+    /* banner */
     #banner {
         height: 400px;
     }
+
 }
 
 /* `lg` applies to medium devices (tablets, less than 992px) */
 @media (max-width: 991.98px) {
     * {
-            font-size: 12px;
-        }
+        font-size: 12px;
+    }
+
     header nav {
         flex-direction: column;
         width: 100%;
@@ -332,20 +295,19 @@ footer .contact ul li:last-child div {
             transform: rotateY(0deg);
         }
     }
-    /* main  */
+
+    /* banner */
     #banner {
         height: 350px;
     }
 
-    #product .list-product .product-item {
-        width: 45%;
-        margin-bottom: 2rem;
-    }
 
 }
 
 /* `md` applies to small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) {
+
+    
     /* banner */
     #banner {
         height: 300px;
@@ -357,15 +319,17 @@ footer .contact ul li:last-child div {
     * {
         font-size: 10px;
     }
+
     /* banner */
     #banner {
         height: 200px;
     }
-    #product .list-product .product-item {
-        margin: 0 auto;
-        width: 90%;
-        margin-bottom: 2rem;
+
+    #banner h1 {
+        font-size: 2rem;
     }
+
+    /* footer  */
     footer .container {
         flex-direction: column;
     }
