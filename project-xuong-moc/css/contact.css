@@ -100,21 +100,32 @@ header nav .menu-item a:hover::after {
 }
 
 #content .container .form {
-    width: calc((500%/12));
+    width: calc(500%/12);
 }
 
 #content .container .title-item {
     font-size: 1.5rem;
     color: #bd945f;
     margin-bottom: 1rem;
-}
-
-#content .container .item {
-    
+    font-family: 'font-ultra';
 }
 
 #content .container .item input {
     padding: 1rem;
+    margin-top: 0.5rem;
+    border: 1px solid #bd945f;
+    color: #2c2e53;
+}
+
+#content .container .item .input{
+    width: 100%;
+}
+
+#content .container .item .btn {
+    background-color: #bd945f;
+    color: #fff;
+    width: 20%;
+    cursor: pointer;
 }
 
 /* footer */
@@ -301,6 +312,17 @@ footer .contact ul li:last-child div {
         height: 350px;
     }
 
+    #content .container .title-item {
+        font-size: 1.5rem;
+        color: #bd945f;
+        margin-bottom: 0.5rem;
+        font-family: 'font-ultra';
+    }
+
+    #content .container .item input {
+        padding: 0.5rem;
+        font-size: 1.2rem;
+    }
 
 }
 
@@ -312,6 +334,28 @@ footer .contact ul li:last-child div {
     #banner {
         height: 300px;
     }
+    /* content  */
+    #content .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #content .container img {
+        width: 60%;
+    }
+
+    #content .container .form {
+        margin-top: 2rem;
+        width: 60%;
+        text-align: center;
+    }
+
+    #content .container .item input {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+
+
 }
 
 /* `sm` applies to x-small devices (portrait phones, less than 576px) */
@@ -327,6 +371,16 @@ footer .contact ul li:last-child div {
 
     #banner h1 {
         font-size: 2rem;
+    }
+
+    #content .container .form,
+    #content .container img {
+        width: 80%;
+    }
+
+    #content .container .item input {
+        padding: 0.7rem;
+        font-size: 1rem;
     }
 
     /* footer  */
