@@ -56,7 +56,7 @@
                             <h2 class="card-title mb-3">STUDENT LIST</h2>
                             <nav class="navbar navbar-light bg-light justify-content-between mb-3 px-2 rounded">
                                 <div class="form-inline d-flex">
-                                    <div class="input-group" style="margin-right:0.5rem">
+                                    <div class="input-group search" style="margin-right:0.5rem">
                                         <input value="" class="form-control" type="search" placeholder="Search"
                                             aria-label="Search" style="width:65%">
                                         <select class="form-select bg-secondary text-white" id="filter"
@@ -69,14 +69,15 @@
                                             </option>
                                         </select>
                                     </div>
-                                    <button class="btn btn-outline-success my-2 my-sm-0 d-flex align-items-center"
+                                    <button
+                                        class="btn btn-outline-success my-2 my-sm-0 d-flex align-items-center btn-search"
                                         type="button">
                                         <i class="bi bi-search"></i>
                                         <span style="margin-left:0.5rem">Search</span>
                                     </button>
                                 </div>
                                 <div class="form-inline">
-                                    <button type="button" class="btn btn-success add-new" onclick="handeToggleForm()">
+                                    <button type="button" class="btn btn-success add-new">
                                         <i class="bi bi-person-plus-fill"></i>
                                         Add new
                                     </button>
@@ -97,8 +98,8 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr class="align-middle">
-                                        <th scope="row">1</th>
+                                    <tr class="align-middle" id="1">
+                                        <th>1</th>
                                         <td>SD01</td>
                                         <td>Nguyễn Thành Hưng</td>
                                         <td>IT1</td>
@@ -107,43 +108,43 @@
                                         <td>0989898222</td>
                                         <td>thanh.hung.st302@gmail.com</td>
                                         <td class="d-flex justify-content-evenly">
-                                            <button type="button" class="btn btn-outline-primary js-btn-details">
+                                            <button type="button" class="btn btn-outline-primary btn-details">
                                                 <i class="bi bi-eye"></i>
                                                 Details
                                             </button>
-                                            <button type="button" class="btn btn-outline-info js-btn-update"
+                                            <button type="button" class="btn btn-outline-info btn-update"
                                                 style="margin:0 0.5rem 0 0.5rem;">
                                                 <i class="bi bi-arrow-repeat"></i>
                                                 Update
                                             </button>
-                                            <button type="button" class="btn btn-outline-danger js-btn-delete"
-                                                data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="">
+                                            <button type="button" class="btn btn-outline-danger btn-delete"
+                                                data-bs-toggle="modal" data-bs-target="#exampleModal">
                                                 <i class="bi bi-trash3"></i>
                                                 Delete
                                             </button>
                                         </td>
                                     </tr>
-                                    <tr class="align-middle">
+                                    <tr class="align-middle" id="2">
                                         <th scope="row">2</th>
                                         <td>SD02</td>
-                                        <td>Nguyễn Văn A</td>
+                                        <td>Nguyễn Mạnh Hùng</td>
                                         <td>IT2</td>
                                         <td>Công nghệ thông tin</td>
                                         <td>Hà Nội</td>
                                         <td>034234234</td>
                                         <td>332@gmail.com</td>
                                         <td class="d-flex justify-content-evenly">
-                                            <button type="button" class="btn btn-outline-primary js-btn-details">
+                                            <button type="button" class="btn btn-outline-primary btn-details">
                                                 <i class="bi bi-eye"></i>
                                                 Details
                                             </button>
-                                            <button type="button" class="btn btn-outline-info js-btn-update"
+                                            <button type="button" class="btn btn-outline-info btn-update"
                                                 style="margin:0 0.5rem 0 0.5rem;">
                                                 <i class="bi bi-arrow-repeat"></i>
                                                 Update
                                             </button>
-                                            <button type="button" class="btn btn-outline-danger js-btn-delete"
-                                                data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="">
+                                            <button type="button" class="btn btn-outline-danger btn-delete"
+                                                data-bs-toggle="modal" data-bs-target="#exampleModal">
                                                 <i class="bi bi-trash3"></i>
                                                 Delete
                                             </button>
@@ -198,7 +199,11 @@
                 </div>
                 <div class="card-body">
                     <form class="row g-3">
-                        <div class="col-md-6">
+                        <div class="col-md-2">
+                            <label for="Id" class="form-label">Id</label>
+                            <input type="text" class="form-control" id="Id" placeholder="Student id">
+                        </div>
+                        <div class="col-md-4">
                             <label for="Name" class="form-label">Full name</label>
                             <input type="text" class="form-control" id="Name" placeholder="Full name">
                         </div>
@@ -234,7 +239,7 @@
                         <div class="col-md-6">
                             <label for="Faculty" class="form-label">Faculty</label>
                             <select id="Faculty" class="form-select">
-                                <option value="" selected disabled>Choose faculty...</option>
+                                <option value="-1" selected disabled>Choose faculty...</option>
                                 <option value="0">Công nghệ thông tin</option>
                                 <option value="1">Cơ khí</option>
                                 <option value="2">Ô tô</option>
@@ -244,7 +249,7 @@
                         <div class="col-md-6">
                             <label for="Class" class="form-label">Class name</label>
                             <select name="ClassId" id="Class" class="form-select">
-                                <option value="" selected disabled>Choose class...</option>
+                                <option value="-1" selected disabled>Choose class...</option>
                                 <option value="0">IT1</option>
                                 <option value="1">IT2</option>
                                 <option value="2">IT3</option>
@@ -261,6 +266,10 @@
                             <button class="js-btn-add btn btn-success" type="button" onclick="handleClickAdd()">
                                 <i class="bi bi-person-plus-fill"></i>
                                 Add
+                            </button>
+                            <button class="js-btn-update btn btn-warning" type="reset">
+                                <i class="bi bi-arrow-repeat"></i>
+                                Update
                             </button>
                         </div>
                     </form>

@@ -1,138 +1,274 @@
-var stt = 3;
 
+var studentInfo = [
+    { studentId: "SD01", fullName: "Nguyễn Thành Hưng", className: 0, faculty: 0, address: "Hà Nội", phoneNumber: "0989898222", email: "thanh.hung.st302@gmail.com", dateOfBirth: "2000-01-01", gender: 0 },
+    { studentId: "SD02", fullName: "Nguyễn Mạnh Hùng", className: 1, faculty: 0, address: "Hà Nội", phoneNumber: "0123456789", email: "332@gmail.com", dateOfBirth: "2003-07-08", gender: 1 },
+]
+
+
+// thêm mới sinh viên
 const handleClickAdd = () => {
     // khai báo 
     var objectInfo = {
+        studentId: "",
         fullName: "",
-        birthday: "",
-        genderOption: "",
-        phone: "",
+        dateOfBirth: "",
+        gender: "",
+        phoneNumber: "",
         email: "",
         address: "",
-        facultyOption: "",
-        classIdOption: ""
+        faculty: "",
+        className: ""
     }
 
     // gán giá trị
+    objectInfo.studentId = document.getElementById("Id").value;
     objectInfo.fullName = document.getElementById("Name").value;
-    objectInfo.birthday = document.getElementById("DateBirth").value;
-    objectInfo.genderOption = document.getElementById("Gender").value;
-    objectInfo.phone = document.getElementById("PhoneNumber").value;
+    objectInfo.dateOfBirth = document.getElementById("DateBirth").value;
+    objectInfo.gender = document.getElementById("Gender").value;
+    objectInfo.phoneNumber = document.getElementById("PhoneNumber").value;
     objectInfo.email = document.getElementById("Email").value;
     objectInfo.address = document.getElementById("Address").value;
-    objectInfo.facultyOption = document.getElementById("Faculty").value;
-    objectInfo.classIdOption = document.getElementById("Class").value;
+    objectInfo.faculty = document.getElementById("Faculty").value;
+    objectInfo.className = document.getElementById("Class").value;
 
-    var gender = "";
-    var classId = "";
-    var faculty = "";
-    if (objectInfo.facultyOption == "0") {
-        faculty = "Công nghệ thông tin";
-    } else if (objectInfo.facultyOption == "1") {
-        faculty = "Cơ khí";
-    } else if (objectInfo.facultyOption == "2") {
-        faculty = "Ô tô";
-    } else if (objectInfo.facultyOption == "3") {
-        faculty = "Điện tử";
-    } else {
-        faculty = "";
-    }
-
-    if (objectInfo.classIdOption == "0") {
-        classId = "IT1";
-    } else if (objectInfo.classIdOption == "1") {
-        classId = "IT2";
-    } else if (objectInfo.classIdOption == "2") {
-        classId = "IT3";
-    } else {
-        classId = "";
-    }
+    studentInfo.push(objectInfo);
 
     // thêm html
-    var htmlTbody = `<tr class="align-middle">
-        <th scope="row">${stt}</th>
-        <td>SD02</td>
-        <td>${objectInfo.fullName}</td>
-        <td>${classId}</td>
-        <td>${faculty}</td>
-        <td>${objectInfo.address}</td>
-        <td>${objectInfo.phone}</td>
-        <td>${objectInfo.email}</td>
+    Clear();
+    document.querySelector(".student-details").classList.remove("student-details-show");
+    // console.log(fullName, birthday, gender, phone, email, address, faculty, classId);
+    render(studentInfo)
+}
+
+// hiển thị
+const render = (studentInfo) => {
+    tbody = ""
+    for (let i = 0; i < studentInfo.length; i++) {
+        tbody += `<tr class="align-middle">
+        <th scope="row">${i + 1}</th>
+        <td>${studentInfo[i].studentId}</td>
+        <td>${studentInfo[i].fullName}</td>
+        <td>${studentInfo[i].className == 0 ? "IT1" : (studentInfo[i].className == 1 ? "IT2" : (studentInfo[i].className == 2 ? "IT3" : ""))}</td>
+        <td>${studentInfo[i].faculty == 0 ? "Công nghệ thông tin" : (studentInfo[i].faculty == 1 ? "Cơ khí" : (studentInfo[i].faculty == 2 ? "Ô tô" : (studentInfo[i].faculty == 3 ? "Điện tử" : "")))}</td>
+        <td>${studentInfo[i].address}</td>
+        <td>${studentInfo[i].phoneNumber}</td>
+        <td>${studentInfo[i].email}</td>
         <td class="d-flex justify-content-evenly">
-            <button type="button" class="btn btn-outline-primary">
+            <button type="button" class="btn btn-outline-primary"
+                onclick="handleClickDetails(${i})">
                 <i class="bi bi-eye"></i>
                 Details
             </button>
             <button type="button" class="btn btn-outline-info"
-                style="margin:0 0.5rem 0 0.5rem;">
+                onclick="handleClickUpdate(${i})" style="margin:0 0.5rem 0 0.5rem;">
                 <i class="bi bi-arrow-repeat"></i>
                 Update
             </button>
             <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal"
-                data-bs-target="#exampleModal">
+                data-bs-target="#exampleModal" onclick="handleClickDelete(${i})">
                 <i class="bi bi-trash3"></i>
-                 Delete
+                Delete
             </button>
         </td>
     </tr>`
+    }
 
-    document.querySelector("tbody").innerHTML += htmlTbody;
+    document.querySelector('tbody').innerHTML = tbody;
 
-    handleClickReset();
-    document.querySelector(".student-details").classList.remove("student-details-show");
-    // console.log(fullName, birthday, gender, phone, email, address, faculty, classId);
-
-    stt++;
 }
 
-const handleClickReset = () => {
+
+const Clear = () => {
+    document.getElementById("Id").value = "";
     document.getElementById("Name").value = "";
     document.getElementById("DateBirth").value = "";
     document.getElementById("Gender").value = "-1";
     document.getElementById("PhoneNumber").value = "";
     document.getElementById("Email").value = "";
     document.getElementById("Address").value = "";
-    document.getElementById("Faculty").value = "";
-    document.getElementById("Class").value = "";
+    document.getElementById("Faculty").value = "-1";
+    document.getElementById("Class").value = "-1";
 }
-// js raw
-// document.querySelector(".add-new").addEventListener("click", () => {
-//     // document.querySelector(".student-details").style.display = "block";
-//     document.querySelector(".student-details").classList.add("student-details-show")
-// })
 
-// document.querySelector(".js-btn-cancel").addEventListener('click', () => {
-//     // document.querySelector(".student-details").style.display = "block";
-//     document.querySelector(".student-details").classList.remove("student-details-show")
-// })
+// nút add
+$(".add-new").click(() => {
+    $(".student-details").addClass("student-details-show");
+    $(".js-btn-reset").css('display', 'block');
+    $(".js-btn-add").css('display', 'block');
+    $(".js-btn-update").css('display', 'none');
+}
+)
 
-// var details = document.querySelectorAll(".js-btn-details");
+// nút cancel
+$(".js-btn-cancel").click(() => {
+    $(".student-details").removeClass("student-details-show");
+    // not readonly
+    document.querySelector('#Id').readOnly = false
+    document.querySelector('#Name').readOnly = false
+    document.querySelector('#Class').disabled = false
+    document.querySelector('#Faculty').disabled = false
+    document.querySelector('#Address').readOnly = false
+    document.querySelector('#PhoneNumber').readOnly = false
+    document.querySelector('#Email').readOnly = false
+    document.querySelector('#DateBirth').readOnly = false
+    document.querySelector('#Gender').disabled = false
+})
 
-// for (let i = 0; i < details.length; i++) {
-//     details[i].addEventListener('click', () => {
-//         document.querySelector(".student-details").classList.add("student-details-show");
-//     })
-// }
+// nút details
+handleClickDetails = (i) => {
+    $(".student-details").addClass("student-details-show");
+    $(".js-btn-reset").css('display', 'none');
+    $(".js-btn-add").css('display', 'none');
+    $(".js-btn-update").css('display', 'none');
+    document.getElementById("Id").value = studentInfo[i].studentId;
+    document.getElementById("Name").value = studentInfo[i].fullName;
+    document.getElementById("DateBirth").value = studentInfo[i].dateOfBirth;
+    document.getElementById("Gender").value = studentInfo[i].gender;
+    document.getElementById("PhoneNumber").value = studentInfo[i].phoneNumber;
+    document.getElementById("Email").value = studentInfo[i].email;
+    document.getElementById("Address").value = studentInfo[i].address;
+    document.getElementById("Faculty").value = studentInfo[i].faculty;
+    document.getElementById("Class").value = studentInfo[i].className;
 
-// // jquery
+    //readonly
+    document.querySelector('#Id').readOnly = true
+    document.querySelector('#Name').readOnly = true
+    document.querySelector('#Class').disabled = true
+    document.querySelector('#Faculty').disabled = true
+    document.querySelector('#Address').readOnly = true
+    document.querySelector('#PhoneNumber').readOnly = true
+    document.querySelector('#Email').readOnly = true
+    document.querySelector('#DateBirth').readOnly = true
+    document.querySelector('#Gender').disabled = true
+}
 
+//nút update
+var checkUpdate;
+handleClickUpdate = (i) => {
+    $(".student-details").addClass("student-details-show");
+    $(".js-btn-reset").css('display', 'none');
+    $(".js-btn-add").css('display', 'none');
+    $(".js-btn-update").css('display', 'block');
+    document.getElementById("Id").value = studentInfo[i].studentId;
+    document.getElementById("Name").value = studentInfo[i].fullName;
+    document.getElementById("DateBirth").value = studentInfo[i].dateOfBirth;
+    document.getElementById("Gender").value = studentInfo[i].gender;
+    document.getElementById("PhoneNumber").value = studentInfo[i].phoneNumber;
+    document.getElementById("Email").value = studentInfo[i].email;
+    document.getElementById("Address").value = studentInfo[i].address;
+    document.getElementById("Faculty").value = studentInfo[i].faculty;
+    document.getElementById("Class").value = studentInfo[i].className;
+    checkUpdate = i;
+}
 
-$(document).ready(function () {
-    $(".add-new").click(function () {
-        $(".student-details").addClass("student-details-show");
-        $(".js-btn-reset").show();
-        $(".js-btn-add").show();
+$(".js-btn-update").click(() => {
+    studentInfo[checkUpdate].studentId = document.getElementById("Id").value;
+    studentInfo[checkUpdate].fullName = document.getElementById("Name").value;
+    studentInfo[checkUpdate].dateOfBirth = document.getElementById("DateBirth").value;
+    studentInfo[checkUpdate].gender = document.getElementById("Gender").value;
+    studentInfo[checkUpdate].phoneNumber = document.getElementById("PhoneNumber").value;
+    studentInfo[checkUpdate].email = document.getElementById("Email").value;
+    studentInfo[checkUpdate].address = document.getElementById("Address").value;
+    studentInfo[checkUpdate].faculty = document.getElementById("Faculty").value;
+    studentInfo[checkUpdate].className = document.getElementById("Class").value;
+    $(".student-details").removeClass("student-details-show")
+    render(studentInfo)
+})
+// nút delete
+handleClickDelete = (id) => {
+    check = confirm("Bạn có chắc chắn muốn xóa ko");
+    if (check) {
+        studentInfo.splice(id, 1);
+        render(studentInfo);
     }
-    )
+}
 
-    $(".js-btn-cancel").click(function () {
-        $(".student-details").removeClass("student-details-show")
-    })
+// fake
 
-    $(".js-btn-details").click(function () {
-        $(".student-details").addClass("student-details-show");
-        $(".js-btn-reset").hide();
-        $(".js-btn-add").hide();
-        console.log($(this).parents('tr').addClass('red'));
-    })
+// nút details
+
+$(".btn-details").click(function () {
+    $(".student-details").addClass("student-details-show");
+    $(".js-btn-reset").css('display', 'none');
+    $(".js-btn-add").css('display', 'none');
+    $(".js-btn-update").css('display', 'none');
+    var a = parseInt($(this).parents('tr').attr('id')) - 1;
+    document.getElementById("Id").value = studentInfo[a].studentId;
+    document.getElementById("Name").value = studentInfo[a].fullName;
+    document.getElementById("DateBirth").value = studentInfo[a].dateOfBirth;
+    document.getElementById("Gender").value = studentInfo[a].gender;
+    document.getElementById("PhoneNumber").value = studentInfo[a].phoneNumber;
+    document.getElementById("Email").value = studentInfo[a].email;
+    document.getElementById("Address").value = studentInfo[a].address;
+    document.getElementById("Faculty").value = studentInfo[a].faculty;
+    document.getElementById("Class").value = studentInfo[a].className;
+
+    //readonly
+    document.querySelector('#Id').readOnly = true
+    document.querySelector('#Name').readOnly = true
+    document.querySelector('#Class').disabled = true
+    document.querySelector('#Faculty').disabled = true
+    document.querySelector('#Address').readOnly = true
+    document.querySelector('#PhoneNumber').readOnly = true
+    document.querySelector('#Email').readOnly = true
+    document.querySelector('#DateBirth').readOnly = true
+    document.querySelector('#Gender').disabled = true
+
+})
+
+//nút update
+$(".btn-update").click(function () {
+    $(".student-details").addClass("student-details-show");
+    $(".js-btn-reset").css('display', 'none');
+    $(".js-btn-add").css('display', 'none');
+    $(".js-btn-update").css('display', 'block');
+    var a = parseInt($(this).parents('tr').attr('id')) - 1;
+    document.getElementById("Id").value = studentInfo[a].studentId;
+    document.getElementById("Name").value = studentInfo[a].fullName;
+    document.getElementById("DateBirth").value = studentInfo[a].dateOfBirth;
+    document.getElementById("Gender").value = studentInfo[a].gender;
+    document.getElementById("PhoneNumber").value = studentInfo[a].phoneNumber;
+    document.getElementById("Email").value = studentInfo[a].email;
+    document.getElementById("Address").value = studentInfo[a].address;
+    document.getElementById("Faculty").value = studentInfo[a].faculty;
+    document.getElementById("Class").value = studentInfo[a].className;
+    checkUpdate = a;
+})
+
+// nút delete
+$(".btn-delete").click(function () {
+    var a = parseInt($(this).parents('tr').attr('id')) - 1;
+    check = confirm("Bạn có chắc chắn muốn xóa ko");
+    if (check) {
+        studentInfo.splice(a, 1);
+        render(studentInfo);
+    }
+})
+
+
+// search
+$(".btn-search").click(function () {
+    var studentInfoSearch = [];
+    var stringSearch = document.querySelector(".search input").value
+    if (document.querySelector(".search select").value == "0") {
+        for (let i = 0; i < studentInfo.length; i++) {
+            if (studentInfo[i].fullName.toLowerCase().includes(stringSearch.toLowerCase())) {
+                studentInfoSearch.push(studentInfo[i])
+            }
+        }
+    } else if (document.querySelector(".search select").value == "1") {
+        for (let i = 0; i < studentInfo.length; i++) {
+            if (studentInfo[i].studentId.toLowerCase().includes(stringSearch.toLowerCase())) {
+                studentInfoSearch.push(studentInfo[i])
+            }
+        }
+    } else {
+        for (let i = 0; i < studentInfo.length; i++) {
+            var stringClass = studentInfo[i].className == 0 ? "IT1" : (studentInfo[i].className == 1 ? "IT2" : (studentInfo[i].className == 2 ? "IT3" : ""))
+            if (stringClass.toLowerCase().includes(stringSearch.toLowerCase())) {
+                studentInfoSearch.push(studentInfo[i])
+            }
+        }
+    }
+    render(studentInfoSearch)
 })
