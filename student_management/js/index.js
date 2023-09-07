@@ -112,6 +112,7 @@ $(".js-btn-cancel").click(() => {
     document.querySelector('#Email').readOnly = false
     document.querySelector('#DateBirth').readOnly = false
     document.querySelector('#Gender').disabled = false
+    Clear();
 })
 
 // nút details
