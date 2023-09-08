@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #main {
+        width: 700px;
+        height: 500px;
+        margin: 0 auto;
+    }
+
+    .image img {
+        width: 100%;
+    }
+
+    .image img {
+        width: 100%;
+
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    a img {
+        width: 160px;
+        border: solid 2px #ccc;
+    }
+
+    .actived {
+        border: solid 4px !important;
+    }
+</style>
+
+<body>
+    <div id="main">
+        <div class="image">
+            <img src="../Day15/img/ban-uong-nuoc-1.png" alt="">
+        </div>
+        <div class="thum">
+            <ul>
+                <li><a href="#">
+                        <img src="../Day15/img/ban-uong-nuoc-1.png" class="actived">
+                    </a></li>
+                <li><a href="#">
+                        <img src="../Day15/img/ban-uong-nuoc-2.png">
+                    </a></li>
+                <li><a href="#">
+                        <img src="../Day15/img/ban-uong-nuoc-3.png">
+                    </a></li>
+                <li><a href="#">
+                        <img src="../Day15/img/ban-uong-nuoc-4.png">
+                    </a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script>
+        jQuery(document).ready(function ($) {
+            $('a>img').click((e) => {
+                var a = e.target.src;
+                console.log(a);
+                $('.image img').attr({ 'src': a });
+                $('a img').removeClass('actived');
+                e.target.className = "actived";
+            })
+        })
+    </script>
+</body>
+
+</html>

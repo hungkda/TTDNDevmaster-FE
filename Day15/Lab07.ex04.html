@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    ul {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+
+    a {
+        border-left: solid 1px #ccc;
+        border-right: solid 1px #ccc;
+        border-top: solid 1px #ccc;
+        padding: 7px 20px;
+        display: block;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        text-decoration: none;
+        background-color: #d2d3d5;
+        color: #000;
+    }
+
+    .selected {
+        border-bottom: solid 1px #fff;
+        background-color: #782a90 !important;
+        color: #fff !important;
+    }
+
+    #content {
+        border: 1px solid #ccc;
+        width: 500px;
+        height: 300px;
+        margin-top: -1px;
+        padding: 5px 10px;
+    }
+</style>
+
+<body>
+    <div id="main">
+        <ul>
+            <li><a href="#" class="selected" id="html">HTML</a></li>
+            <li><a href="#" id="css">CSS</a></li>
+            <li><a href="#" id="jquery">Jquery</a></li>
+            <li><a href="#" id="php">PHP</a></li>
+        </ul>
+        <div id="content"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script>
+        jQuery(document).ready(function ($) {
+            $("#content").load("tab/html.html")
+            $('li a').click((e) => {
+                $('a').removeClass('selected');
+                id = e.target.id;
+                $('#' + id).addClass('selected');
+                $("#content").load("tab/" + id + ".html")
+
+            })
+        })
+    </script>
+</body>
+
+</html>

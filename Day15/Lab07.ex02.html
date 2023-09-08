@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    ul {
+        list-style: none;
+        display: flex;
+    }
+
+    li {
+        border: 1px solid;
+        margin: 0 1rem;
+    }
+
+    a {
+        text-decoration: none;
+        padding: 2rem 1rem;
+        color: blue;
+    }
+
+    .do {
+        color: red;
+    }
+
+    .xanh {
+        color: green;
+    }
+
+    .vang {
+        color: yellow;
+    }
+
+    .ghi {
+        color: #666;
+    }
+
+    .tim {
+        color: violet;
+    }
+</style>
+
+<body>
+    <div id="main">
+        <h3>Chọn màu chữ</h3>
+        <ul>
+            <li><a href="#" id="do">Đỏ</a></li>
+            <li><a href="#" id="xanh">Xanh</a></li>
+            <li><a href="#" id="vang">vàng</a></li>
+            <li><a href="#" id="ghi">Ghi</a></li>
+            <li><a href="#" id="tim">Tím</a></li>
+        </ul>
+        <p class="">Lập trình web với C++</p>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script>
+        jQuery(document).ready(function ($) {
+            $('a').click((e) => {
+                a = e.target.id;
+                $('p').attr({ 'class': a })
+            })
+        })
+    </script>
+</body>
+
+</html>
