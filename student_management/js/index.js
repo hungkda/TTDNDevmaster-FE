@@ -4,42 +4,6 @@ var studentInfo = [
     { studentId: "SD02", fullName: "Nguyễn Mạnh Hùng", className: 1, faculty: 0, address: "Hà Nội", phoneNumber: "0123456789", email: "332@gmail.com", dateOfBirth: "2003-07-08", gender: 1 },
 ]
 
-
-// thêm mới sinh viên
-const handleClickAdd = () => {
-    // khai báo 
-    var objectInfo = {
-        studentId: "",
-        fullName: "",
-        dateOfBirth: "",
-        gender: "",
-        phoneNumber: "",
-        email: "",
-        address: "",
-        faculty: "",
-        className: ""
-    }
-
-    // gán giá trị
-    objectInfo.studentId = document.getElementById("Id").value;
-    objectInfo.fullName = document.getElementById("Name").value;
-    objectInfo.dateOfBirth = document.getElementById("DateBirth").value;
-    objectInfo.gender = document.getElementById("Gender").value;
-    objectInfo.phoneNumber = document.getElementById("PhoneNumber").value;
-    objectInfo.email = document.getElementById("Email").value;
-    objectInfo.address = document.getElementById("Address").value;
-    objectInfo.faculty = document.getElementById("Faculty").value;
-    objectInfo.className = document.getElementById("Class").value;
-
-    studentInfo.push(objectInfo);
-
-    // thêm html
-    Clear();
-    document.querySelector(".student-details").classList.remove("student-details-show");
-    // console.log(fullName, birthday, gender, phone, email, address, faculty, classId);
-    render(studentInfo)
-}
-
 // hiển thị
 const render = (studentInfo) => {
     tbody = ""
@@ -77,6 +41,43 @@ const render = (studentInfo) => {
 
 }
 
+render(studentInfo);
+
+
+// thêm mới sinh viên
+const handleClickAdd = () => {
+    // khai báo 
+    var objectInfo = {
+        studentId: "",
+        fullName: "",
+        dateOfBirth: "",
+        gender: "",
+        phoneNumber: "",
+        email: "",
+        address: "",
+        faculty: "",
+        className: ""
+    }
+
+    // gán giá trị
+    objectInfo.studentId = document.getElementById("Id").value;
+    objectInfo.fullName = document.getElementById("Name").value;
+    objectInfo.dateOfBirth = document.getElementById("DateBirth").value;
+    objectInfo.gender = document.getElementById("Gender").value;
+    objectInfo.phoneNumber = document.getElementById("PhoneNumber").value;
+    objectInfo.email = document.getElementById("Email").value;
+    objectInfo.address = document.getElementById("Address").value;
+    objectInfo.faculty = document.getElementById("Faculty").value;
+    objectInfo.className = document.getElementById("Class").value;
+
+    studentInfo.push(objectInfo);
+
+    // thêm html
+    Clear();
+    document.querySelector(".student-details").classList.remove("student-details-show");
+    // console.log(fullName, birthday, gender, phone, email, address, faculty, classId);
+    render(studentInfo)
+}
 
 const Clear = () => {
     document.getElementById("Id").value = "";
@@ -183,69 +184,6 @@ handleClickDelete = (id) => {
         render(studentInfo);
     }
 }
-
-// fake
-
-// nút details
-
-$(".btn-details").click(function () {
-    $(".student-details").addClass("student-details-show");
-    $(".js-btn-reset").css('display', 'none');
-    $(".js-btn-add").css('display', 'none');
-    $(".js-btn-update").css('display', 'none');
-    var a = parseInt($(this).parents('tr').attr('id')) - 1;
-    document.getElementById("Id").value = studentInfo[a].studentId;
-    document.getElementById("Name").value = studentInfo[a].fullName;
-    document.getElementById("DateBirth").value = studentInfo[a].dateOfBirth;
-    document.getElementById("Gender").value = studentInfo[a].gender;
-    document.getElementById("PhoneNumber").value = studentInfo[a].phoneNumber;
-    document.getElementById("Email").value = studentInfo[a].email;
-    document.getElementById("Address").value = studentInfo[a].address;
-    document.getElementById("Faculty").value = studentInfo[a].faculty;
-    document.getElementById("Class").value = studentInfo[a].className;
-
-    //readonly
-    document.querySelector('#Id').readOnly = true
-    document.querySelector('#Name').readOnly = true
-    document.querySelector('#Class').disabled = true
-    document.querySelector('#Faculty').disabled = true
-    document.querySelector('#Address').readOnly = true
-    document.querySelector('#PhoneNumber').readOnly = true
-    document.querySelector('#Email').readOnly = true
-    document.querySelector('#DateBirth').readOnly = true
-    document.querySelector('#Gender').disabled = true
-
-})
-
-//nút update
-$(".btn-update").click(function () {
-    $(".student-details").addClass("student-details-show");
-    $(".js-btn-reset").css('display', 'none');
-    $(".js-btn-add").css('display', 'none');
-    $(".js-btn-update").css('display', 'block');
-    var a = parseInt($(this).parents('tr').attr('id')) - 1;
-    document.getElementById("Id").value = studentInfo[a].studentId;
-    document.getElementById("Name").value = studentInfo[a].fullName;
-    document.getElementById("DateBirth").value = studentInfo[a].dateOfBirth;
-    document.getElementById("Gender").value = studentInfo[a].gender;
-    document.getElementById("PhoneNumber").value = studentInfo[a].phoneNumber;
-    document.getElementById("Email").value = studentInfo[a].email;
-    document.getElementById("Address").value = studentInfo[a].address;
-    document.getElementById("Faculty").value = studentInfo[a].faculty;
-    document.getElementById("Class").value = studentInfo[a].className;
-    checkUpdate = a;
-})
-
-// nút delete
-$(".btn-delete").click(function () {
-    var a = parseInt($(this).parents('tr').attr('id')) - 1;
-    check = confirm("Bạn có chắc chắn muốn xóa ko");
-    if (check) {
-        studentInfo.splice(a, 1);
-        render(studentInfo);
-    }
-})
-
 
 // search
 $(".btn-search").click(function () {
