@@ -22,16 +22,7 @@ header .navbar .navbar-menu .menu-item{
     line-height: 2.5;
 }
 
-header .navbar .navbar-menu .menu-item:first-child::after{
-    content: "";
-    position: absolute;
-    left: 0;right: 0;
-    bottom: 0;
-    height: 0.35rem;
-    width: 70%;
-    background-color: #bd945f;
-}
-
+header .navbar .selected::after,
 header .navbar .navbar-menu .menu-item:hover::after{
     content: "";
     position: absolute;
@@ -50,8 +41,10 @@ header .navbar .navbar-menu .menu-item:hover::after{
     border-color: #bd945f;
 }
 .text-blue {
-    color: #2c2e53;
+    color: #343659;
 }
+
+/* all-products */
 main .banner .img-banner {
     position: relative;
 }
@@ -82,6 +75,18 @@ main .list-products .title::after {
     background-color: #bd945f;
 }
 
+main .list-details-desc {
+    border-bottom: 3px solid #bd945f;
+}
+
+main .list-details-desc li {
+    cursor: pointer;
+}
+
+main .list-details-desc li:hover {
+    color: #343659;
+    border-bottom: 3px solid #343659;
+}
 /* footer */
 footer{
     margin-top: auto;
