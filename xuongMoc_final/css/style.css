@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-size: 14px;
@@ -7,132 +7,207 @@
     list-style: none;
 }
 
-a{
+a {
     text-decoration: none;
     color: #222222;
 }
-body{
+
+body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
+
 /* header */
-header .navbar .navbar-menu .menu-item{
+header .navbar .navbar-menu .menu-item {
     position: relative;
-    line-height: 2.5;
+    line-height: 1.5;
 }
 
-header .navbar .navbar-menu .menu-item:first-child::after{
+header .navbar .selected::after,
+header .navbar .navbar-menu .menu-item:hover::after {
     content: "";
     position: absolute;
-    left: 0;right: 0;
+    left: 0;
+    right: 0;
     bottom: 0;
-    height: 0.35rem;
+    height: 0.25rem;
     width: 70%;
     background-color: #bd945f;
 }
 
-header .navbar .navbar-menu .menu-item:hover::after{
-    content: "";
-    position: absolute;
-    left: 0;right: 0;
-    bottom: 0;
-    height: 0.35rem;
-    width: 70%;
-    background-color: #bd945f;
+/* all */
+.text-gold {
+    color: #bd945f !important;
 }
 
-/* banner */
-.text-gold{
-    color: #bd945f;
+.btn-gold {
+    background-color: #bd945f !important;
 }
+
+.btn-gold:hover {
+    background-color: #b39e82 !important;
+}
+
 .border-gold {
-    border-color: #bd945f;
+    border-color: #bd945f !important;
 }
+
 .text-blue {
-    color: #2c2e53;
+    color: #343659 !important;
 }
-main .banner .img-banner {
+
+.font-ultra {
+    font-family: 'font-ultra';
+}
+
+.title {
+    font-family: 'font-ultra';
+    position: relative;
+    line-height: 1.5rem;
+}
+
+.title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 0.25rem;
+    width: 60%;
+    background-color: #bd945f;
+}
+
+.bg-f3f3f3 {
+    background-color: #f3f3f3;
+}
+/* index.html */
+/* index banner */
+#index .banner{
     position: relative;
 }
 
-main .banner .btn-buy {
+#index .introduction {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 10%;
+}
+
+#index .introduction p {
+    text-align: justify;
+}
+
+/* all-products.html*/
+/* all-products banner*/
+#all-products .banner .img-banner {
+    position: relative;
+}
+
+#all-products .banner .btn-buy {
     position: absolute;
     right: 20%;
     bottom: 38%;
 }
 
-.list-products {
+/* all-products list-product*/
+#all-products .list-products {
     background-color: #f3f3f3;
 }
 
-main .list-products .title{
+#all-products .list-products .filter-price-item:hover {
+    cursor: pointer;
+    color: #343659;
+}
+
+#all-products .list-products .title {
     font-family: 'font-ultra';
     position: relative;
 }
 
-main .list-products .title::after {
+#all-products .list-products .title::after {
     content: "";
     position: absolute;
     left: 0;
     right: 0;
     bottom: -3px;
     height: 0.4rem;
-    width: 10%;
+    width: 60%;
     background-color: #bd945f;
 }
 
-/* footer */
-footer{
-    margin-top: auto;
-    background-color: #363636; 
+#all-products .list-details-desc {
+    border-bottom: 3px solid #bd945f;
 }
-footer li, footer span, footer i, footer a{
+
+#all-products .list-details-desc li {
+    cursor: pointer;
+}
+
+#all-products .list-details-desc li:hover {
+    color: #343659;
+    border-bottom: 3px solid #343659;
+}
+
+/* footer */
+footer {
+    margin-top: auto;
+    background-color: #363636;
+}
+
+footer li,
+footer span,
+footer i,
+footer a {
     color: #fff;
     font-family: 'font-thin';
     cursor: pointer;
 }
 
-footer li:hover, footer span:hover, footer i:hover, footer a:hover{
+footer li:hover,
+footer span:hover,
+footer i:hover,
+footer a:hover {
     color: #bd945f;
 }
 
 footer .container .title {
-    
-   margin-bottom: 1.3rem;
-   position: relative;
+
+    margin-bottom: 1.3rem;
+    position: relative;
 }
-footer .container .title::after{
+
+footer .container .title::after {
     content: "";
     position: absolute;
-    left: 0;right: 0;
+    left: 0;
+    right: 0;
     bottom: 0;
     height: 0.2rem;
     width: 6rem;
     background-color: #fff;
 
- }
- footer ul {
-    padding: 0!important;
 }
 
-footer .container .title span{
+footer ul {
+    padding: 0 !important;
+}
+
+footer .container .title span {
     font-family: 'font-medium';
 }
 
-
-footer .contact .img-social{
+footer .contact .img-social {
     width: 2rem;
     margin-right: 1rem;
 }
 
-footer .contact img{
+footer .contact img {
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
 
-footer .contact li:last-child{
+footer .contact li:last-child {
     width: 11rem;
 }
-

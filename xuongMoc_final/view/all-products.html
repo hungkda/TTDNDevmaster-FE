@@ -14,7 +14,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 
     <!-- css -->
     <link rel="stylesheet" href="../css/font.css">
@@ -30,29 +33,29 @@
             </div>
             <ul class="navbar-menu d-flex justify-content-between w-50">
                 <li class="menu-item">
-                    <a href="#">TRANG CHỦ</a>
+                    <a href="../view/index.html">TRANG CHỦ</a>
                 </li>
                 <li class="menu-item">
-                    <a href="#">GIỚI THIỆU</a>
+                    <a href="../view/introduction.html">GIỚI THIỆU</a>
+                </li>
+                <li class="menu-item selected">
+                    <a href="../view/product.html">SẢN PHẨM</a>
                 </li>
                 <li class="menu-item">
-                    <a href="#">SẢN PHẨM</a>
+                    <a href="../view/news.html">TIN TỨC</a>
                 </li>
                 <li class="menu-item">
-                    <a href="#">TIN TỨC</a>
+                    <a href="../view/partner.html">ĐỐI TÁC</a>
                 </li>
                 <li class="menu-item">
-                    <a href="#">ĐỐI TÁC</a>
-                </li>
-                <li class="menu-item">
-                    <a href="#">LIÊN HỆ</a>
+                    <a href="../view/contact.html">LIÊN HỆ</a>
                 </li>
             </ul>
         </nav>
     </header>
     <!-- END: header -->
 
-    <main>
+    <main id="all-products">
         <!-- Begin: banner -->
         <section class="banner">
             <div class="img-banner">
@@ -68,37 +71,39 @@
                 <div class="filter-box m-5 mb-0 d-flex justify-content-between">
                     <div class="filter-price w-50">
                         <ul class="d-flex justify-content-between ps-0">
-                            <li class="text-blue">Chọn mức giá</li>
-                            <li class="text-gold">Dưới 5tr</li>
-                            <li class="text-gold">5tr - 10tr</li>
-                            <li class="text-gold">10tr - 15tr</li>
-                            <li class="text-gold">Trên 15tr</li>
+                            <li class="text-blue filter-price-item">Chọn mức giá</li>
+                            <li class="text-gold filter-price-item" id="less5m">Dưới 5tr</li>
+                            <li class="text-gold filter-price-item" id="5mTo10m">5tr - 10tr</li>
+                            <li class="text-gold filter-price-item" id="10mTo15m">10tr - 15tr</li>
+                            <li class="text-gold filter-price-item" id="more15m">Trên 15tr</li>
                         </ul>
                     </div>
+                    <p></p>
                     <div class="filter-sort w-25 d-flex justify-content-end">
                         <div class="drop-down">
                             <span class="dropdown-toggle" type="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">Sắp xếp</span>
                             <div class="dropdown-menu border-gold border-4">
-                                <div class="dropdown-item">Mới nhất</div>
-                                <div class="dropdown-item">Phổ biến nhất</div>
-                                <div class="dropdown-item">Từ thấp đến cao</div>
-                                <div class="dropdown-item">Từ cao đến thâp</div>
+                                <div class="dropdown-item" id="sortDefault">Mặc định</div>
+                                <div class="dropdown-item" id="sortPriceASC">Từ thấp đến cao</div>
+                                <div class="dropdown-item" id="sortPriceDESC">Từ cao đến thâp</div>
+                                <div class="dropdown-item" id="sortRate">Chất lượng</div>
+                                <div class="dropdown-item" id="sortName">Theo tên</div>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="products .text-blue p-5 bg-light">
-                    <div class="title h3 text-blue">PHÒNG KHÁCH</div>
+                    <div class="title h3 text-blue d-inline">PHÒNG KHÁCH</div>
                     <div class="row list-products-item">
-
+                        <!-- render list products  -->
                     </div>
 
                     <div class="container mt-4 d-flex justify-content-center">
                         <nav aria-label="Page navigation example">
                             <ul class="pagination d-flex justify-content-end js-pagination">
-
+                                <!-- render page  -->
                             </ul>
                         </nav>
                     </div>
@@ -109,6 +114,92 @@
         </section>
         <!-- END: list-products -->
 
+        <!-- BEGIn: Modal productdetails-->
+        <!-- Modal -->
+        <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Product details</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body modal-main">
+                        <!-- Render product details -->
+
+
+                        <!-- <div class="product-title text-blue h2">BÀN UỐNG NƯỚC</div>
+                        <div class="product-info d-flex">
+                            <div class="product-slide" style="width: 60%;">
+                                <div class="slider-for">
+                                    <div class="img-box">
+                                        <img class="w-100" src="../images/san-pham/ban-uong-nuoc-1.png" alt="">
+                                    </div>
+                                    <div class="img-box">
+                                        <img class="w-100" src="../images/san-pham/ban-uong-nuoc-2.png" alt="">
+                                    </div>
+                                    <div class="img-box">
+                                        <img class="w-100" src="../images/san-pham/ban-uong-nuoc-3.png" alt="">
+                                    </div>
+                                    <div class="img-box">
+                                        <img class="w-100" src="../images/san-pham/ban-uong-nuoc-4.png" alt="">
+                                    </div>
+                                    <div class="img-box">
+                                        <img class="w-100" src="../images/san-pham/ban-uong-nuoc-2.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="slider-nav mt-3">
+                                    <div class="img-box me-2">
+                                        <img src="../images/san-pham/ban-uong-nuoc-1.png" alt="">
+                                    </div>
+                                    <div class="img-box me-2">
+                                        <img src="../images/san-pham/ban-uong-nuoc-2.png" alt="">
+                                    </div>
+                                    <div class="img-box me-2">
+                                        <img src="../images/san-pham/ban-uong-nuoc-3.png" alt="">
+                                    </div>
+                                    <div class="img-box me-2">
+                                        <img src="../images/san-pham/ban-uong-nuoc-4.png" alt="">
+                                    </div>
+                                    <div class="img-box me-2">
+                                        <img src="../images/san-pham/ban-uong-nuoc-2.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-desc ms-4" style="width: 40%;">
+                                <div class="rate h4">
+                                    Đánh giá:
+                                    <i class="fa-solid fa-star text-gold"></i>
+                                    <i class="fa-solid fa-star text-gold"></i>
+                                    <i class="fa-solid fa-star text-gold"></i>
+                                </div>
+                                <div class="desc text-blue">Mổ tảtảtảtảtả</div>
+                                <div class="price h3 text-gold">99999999999</div>
+                            </div>
+                        </div>
+                        <div class="product-details-desc">
+                            <ul class="list-details-desc d-flex ps-0 mb-0">
+                                <li class="text-gold h3">Đặc trưng <span class="text-gold h3">|</span></li>
+                                <li class="text-gold h3">Thông số <span class="text-gold h3">|</span></li>
+                                <li class="text-gold h3">Bảo quản <span class="text-gold h3">|</span></li>
+                                <li class="text-gold h3">Bảo hành <span class="text-gold h3">|</span></li>
+                                <li class="text-gold h3">Cam kết </li>
+                            </ul>
+                            <p class="mt-2 text-blue">
+                                - Bàn cà phê cứng đơn giản với kệ mở <br>
+                                - Phong cách hình học tối giản<br>
+                                - Kệ bên trong có kích thước hoàn hảo cho tạp chí, đế lót ly và các phụ kiện phòng khách
+                                khác<br>
+                                - Có thể được sử dụng như một bàn TV thấp - Kệ mỏng hoàn hảo để chứa một hộp hàng đầu
+                                hoặc đầu phát blu-ray<br>
+                                - Làm bằng gỗ Sheesham cao cấp<br>
+                                - Không cần lắp ráp.<br>
+                            </p>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END: Modal  -->
     </main>
 
     <!-- Begin: footer  -->
@@ -140,19 +231,19 @@
                 </div>
                 <ul class="about-us">
                     <li>
-                        <a>Giới thiệu</a>
+                        <a href="../view/introduction.html">Giới thiệu</a>
                     </li>
                     <li>
-                        <a>Sản phẩm</a>
+                        <a href="../view/product.html">Sản phẩm</a>
                     </li>
                     <li>
-                        <a>Tin tức</a>
+                        <a href="../view/news.html">Tin tức</a>
                     </li>
                     <li>
-                        <a>Đối tác</a>
+                        <a href="../view/partner.html">Đối tác</a>
                     </li>
                     <li>
-                        <a>Liên hệ</a>
+                        <a href="../view/contact.html">Liên hệ</a>
                     </li>
                 </ul>
             </div>
@@ -196,8 +287,32 @@
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <!-- slick -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            const myModalEl = document.getElementById('exampleModal')
+            myModalEl.addEventListener('show.bs.modal', event => {
+                $('.slider-for').slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    fade: true,
+                    arrows: false,
+                    asNavFor: '.slider-nav'
+                });
+                $('.slider-nav').slick({
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                    asNavFor: '.slider-for',
+                    dots: true,
+                    focusOnSelect: true,
+                    arrows: false
+                });
+            })
+        });
+    </script>
     <!-- js -->
-    <script src="../js/index.js"></script>
+    <script src="../js/all-products.js"></script>
 </body>
 
 </html>

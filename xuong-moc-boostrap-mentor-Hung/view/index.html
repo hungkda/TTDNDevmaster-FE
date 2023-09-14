@@ -71,22 +71,22 @@
                 <div class="filter-box m-5 mb-0 d-flex justify-content-between">
                     <div class="filter-price w-50">
                         <ul class="d-flex justify-content-between ps-0">
-                            <li class="text-blue">Chọn mức giá</li>
-                            <li class="text-gold">Dưới 5tr</li>
-                            <li class="text-gold">5tr - 10tr</li>
-                            <li class="text-gold">10tr - 15tr</li>
-                            <li class="text-gold">Trên 15tr</li>
+                            <li class="text-blue filter-price-item">Chọn mức giá</li>
+                            <li class="text-gold filter-price-item" id="less5m">Dưới 5tr</li>
+                            <li class="text-gold filter-price-item" id="5mTo10m">5tr - 10tr</li>
+                            <li class="text-gold filter-price-item" id="10mTo15m">10tr - 15tr</li>
+                            <li class="text-gold filter-price-item" id="more15m">Trên 15tr</li>
                         </ul>
                     </div>
+                    <p></p>
                     <div class="filter-sort w-25 d-flex justify-content-end">
                         <div class="drop-down">
                             <span class="dropdown-toggle" type="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">Sắp xếp</span>
                             <div class="dropdown-menu border-gold border-4">
                                 <div class="dropdown-item" id="sortDefault">Mặc định</div>
-                                <div class="dropdown-item">Phổ biến nhất</div>
-                                <div class="dropdown-item">Từ thấp đến cao</div>
-                                <div class="dropdown-item">Từ cao đến thâp</div>
+                                <div class="dropdown-item" id="sortPriceASC">Từ thấp đến cao</div>
+                                <div class="dropdown-item" id="sortPriceDESC">Từ cao đến thâp</div>
                                 <div class="dropdown-item" id="sortRate">Chất lượng</div>
                                 <div class="dropdown-item" id="sortName">Theo tên</div>
                             </div>

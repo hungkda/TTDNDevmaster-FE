@@ -1,30 +1,30 @@
 $(document).ready(function () {
     var listProduct = [
-        { img: "sp1.png", title: "BÀN UỐNG NƯỚC", rate: 5, des: "(Size vừa, nâu đậm)", price: "8.999.999" },
-        { img: "sp2.png", title: "BÀN TI VI", rate: 5, des: "(Size vừa, xanh đậm)", price: "18.999.999" },
-        { img: "sp3.png", title: "BÀN UỐNG TRÀ", rate: 2, des: "(Size to, nâu đậm)", price: "8.999.999" },
-        { img: "sp4.png", title: "BÀN UỐNG NƯỚC", rate: 5, des: "(Size vừa, nâu đậm)", price: "8.999.999" },
-        { img: "sp5.png", title: "BÀN UỐNG NƯỚC", rate: 4, des: "(Size vừa, nâu đậm)", price: "8.999.999" },
-        { img: "sp6.png", title: "BÀN UỐNG TRÀ", rate: 5, des: "(Size vừa, vàng đậm)", price: "28.999.999" },
-        { img: "sp7.png", title: "BÀN KHÔNG NƯỚC", rate: 5, des: "(Size bé, nâu đậm)", price: "8.999.999" },
-        { img: "sp8.png", title: "BÀN UỐNG NƯỚC", rate: 3, des: "(Size vừa, nâu đậm)", price: "8.999.999" },
-        { img: "sp9.png", title: "BÀN UỐNG TRÀ 2", rate: 3, des: "(Size vừa, nâu đậm)", price: "8.999.999" },
-        { img: "sp10.png", title: "BÀN KHÔNG NƯỚC 2", rate: 3, des: "(Size vừa, nâu đậm)", price: "8.999.999" },
-        { img: "sp11.png", title: "BÀN UỐNG NƯỚC 2", rate: 3, des: "(Size vừa, nâu đậm)", price: "8.999.999" },
-        { img: "sp12.png", title: "A UỐNG NƯỚC 2", rate: 4, des: "(Size vừa, nâu đậm)", price: "38.999.999" },
-        { img: "sp1.png", title: "BÀN KHÔNG TRÀ 2", rate: 3, des: "(Size vừa, tím đậm)", price: "8.999.999 đ" },
-        { img: "sp2.png", title: "BÀN UỐNG NƯỚC 2", rate: 3, des: "(Size vừa, nâu đậm)", price: "8.999.999 đ" },
-        { img: "sp3.png", title: "BÀN UỐNG NƯỚC 2", rate: 5, des: "(Size lớn, nâu đậm)", price: "8.999.999 đ" },
-        { img: "sp4.png", title: "BÀN UỐNG NƯỚC 2", rate: 3, des: "(Size vừa, đen đậm)", price: "48.999.999 đ" },
-        { img: "sp5.png", title: "BÀN KHÔNG TRÀ 3", rate: 3, des: "(Size vừa, nâu đậm)", price: "8.999.999 đ" },
-        { img: "sp6.png", title: "BÀN UỐNG NƯỚC 3", rate: 3, des: "(Size vừa, nâu đậm)", price: "8.999.999 đ" },
-        { img: "sp7.png", title: "BÀN KHÔNG NƯỚC 3", rate: 3, des: "(Size vừa, hồng đậm)", price: "58.999.999 đ" },
-        { img: "sp8.png", title: "BÀN UỐNG NƯỚC 3", rate: 3, des: "(Size vừa, nâu đậm)", price: "8.999.999 đ" },
+        { img: "sp1.png", title: "BÀN UỐNG NƯỚC", rate: 5, des: "(Size vừa, nâu đậm)", price: 1000000 },
+        { img: "sp2.png", title: "BÀN TI VI", rate: 5, des: "(Size vừa, xanh đậm)", price: 18999999 },
+        { img: "sp3.png", title: "KỆ UỐNG TRÀ", rate: 2, des: "(Size to, nâu đậm)", price: 8999999 },
+        { img: "sp4.png", title: "KỆ LIMITED", rate: 5, des: "(Size vừa, nâu đậm)", price: 100000000 },
+        { img: "sp5.png", title: "BÀN UỐNG NƯỚC", rate: 4, des: "(Size vừa, nâu đậm)", price: 1999999 },
+        { img: "sp6.png", title: "GIƯỜNG UỐNG TRÀ", rate: 5, des: "(Size vừa, vàng đậm)", price: 28999999 },
+        { img: "sp7.png", title: "BÀN KHÔNG NƯỚC", rate: 1, des: "(Size bé, nâu đậm)", price: 8999699 },
+        { img: "sp8.png", title: "BÀN UỐNG NƯỚC", rate: 3, des: "(Size vừa, nâu đậm)", price: 8989999 },
+        { img: "sp9.png", title: "GHẾ UỐNG TRÀ 2", rate: 3, des: "(Size vừa, nâu đậm)", price: 12999999 },
+        { img: "sp10.png", title: "BÀN KHÔNG NƯỚC 2", rate: 3, des: "(Size vừa, nâu đậm)", price: 8999999 },
+        { img: "sp11.png", title: "BÀN UỐNG NƯỚC 2", rate: 3, des: "(Size vừa, nâu đậm)", price: 1999999 },
+        { img: "sp12.png", title: "A UỐNG NƯỚC 2", rate: 4, des: "(Size vừa, nâu đậm)", price: 18999999 },
+        { img: "sp1.png", title: "BÀN KHÔNG TRÀ 2", rate: 3, des: "(Size vừa, tím đậm)", price: 8999999 },
+        { img: "sp2.png", title: "BÀN UỐNG NƯỚC 2", rate: 4, des: "(Size vừa, nâu đậm)", price: 14999999 },
+        { img: "sp3.png", title: "BÀN UỐNG NƯỚC 2", rate: 5, des: "(Size lớn, nâu đậm)", price: 8939999 },
+        { img: "sp4.png", title: "KỆ UỐNG NƯỚC 2", rate: 3, des: "(Size vừa, đen đậm)", price: 48999999 },
+        { img: "sp5.png", title: "BÀN KHÔNG TRÀ 3", rate: 3, des: "(Size vừa, nâu đậm)", price: 8999999 },
+        { img: "sp6.png", title: "BÀN UỐNG NƯỚC 3", rate: 3, des: "(Size vừa, nâu đậm)", price: 4999699 },
+        { img: "sp7.png", title: "TỦ KHÔNG NƯỚC 3", rate: 1, des: "(Size vừa, hồng đậm)", price: 58999999 },
+        { img: "sp8.png", title: "BÀN UỐNG NƯỚC 3", rate: 2, des: "(Size vừa, nâu đậm)", price: 8999999 },
     ]
 
 
     //add item nhanh hơn và gọn hơn
-    listProduct.push(addProduct("sp1.png", "BÀN UỐNG NƯỚC 3", 5, "(Size vừa, nâu đậm)", "8.999.999"))
+    listProduct.push(addProduct("sp1.png", "BÀN UỐNG NƯỚC 3", 5, "(Size vừa, nâu đậm)", 8999999))
 
     function addProduct(img, title, rate, des, price) {
         return {
@@ -40,9 +40,10 @@ $(document).ready(function () {
 
     var currentPage = 1;
     var perPage = 8;
-    var pageNumber = Math.ceil(listProduct.length / perPage);
     var listProduct2 = listProduct;
+    var pageNumber = Math.ceil(listProduct2.length / perPage);
     var listPageProduct = [];
+    var check = false;
     //render products
     function render(list) {
         var html = "";
@@ -61,7 +62,7 @@ $(document).ready(function () {
                                     </div>
                                     <span class="text-secondary d-block"> ${list[i].des}
                                     </span>
-                                    <span class="price"> ${list[i].price}
+                                    <span class="price">${list[i].price.toLocaleString('vi', { style: 'currency', currency: 'VND' })}
                                     </span>
                                 </div>
                             </div>
@@ -99,96 +100,61 @@ $(document).ready(function () {
                                 </li>`
 
         $('.js-pagination').html(ul);
-    }
-    listPageProduct = listProduct2.slice((currentPage - 1) * perPage, currentPage * perPage);
-    render(listPageProduct);
-    rederPagination();
-
-    //sắp xếp theo rate
-    $("#sortRate").click(function () {
-        //copy array object;
-        listProduct2 = listProduct.slice()
-        listProduct2 = listProduct2.sort(function (a, b) {
-            return b.rate - a.rate
-        })
-        listPageProduct = listProduct2.slice((currentPage - 1) * perPage, currentPage * perPage);
-        render(listPageProduct)
-    })
-
-    //mặc định
-    $("#sortDefault").click(function () {
-        listProduct2 = listProduct.slice();
-        listPageProduct = listProduct2.slice((currentPage - 1) * perPage, currentPage * perPage);
-        render(listPageProduct)
-    })
-
-    //theo tên
-    $("#sortName").click(function () {
-        //copy array object;
-        listProduct2 = listProduct.slice()
-
-        listProduct2 = listProduct2.sort(function (a, b) {
-            if (a.title <= b.title) { return -1; }
-            else {
-                return 1;
-            }
-        })
-        listPageProduct = listProduct2.slice((currentPage - 1) * perPage, currentPage * perPage);
-        render(listPageProduct)
-
-    })
-
-    //điểu khiển page
-    if (currentPage == 1) {
-        $(".page-down").addClass("disabled")
-    }
-    if (currentPage == pageNumber) {
-        $(".page-up").addClass("disabled")
-    }
-
-    $(".page-number").click(function () {
-        $(".page-down").removeClass("disabled")
-        $(".page-up").removeClass("disabled")
-        currentPage = $(this).data('id');
-        listPageProduct = listProduct2.slice((currentPage - 1) * perPage, currentPage * perPage);
-        $('.page-number').removeClass("active");
-        $(this).addClass("active")
         if (currentPage == 1) {
             $(".page-down").addClass("disabled")
         }
         if (currentPage == pageNumber) {
             $(".page-up").addClass("disabled")
         }
-        render(listPageProduct);
 
-    })
-
-    $(".page-down").click(function () {
-        if (currentPage == 2) {
-            currentPage--;
-            $(".page-down").addClass("disabled")
-        } else {
-            currentPage--;
-            $(".page-up").removeClass("disabled")
-        }
-        listPageProduct = listProduct2.slice((currentPage - 1) * perPage, currentPage * perPage);
-        $('.page-number').removeClass("active");
-        render(listPageProduct);
-    })
-
-    $(".page-up").click(function () {
-        if (currentPage == (pageNumber - 1)) {
-            currentPage++;
-            $(".page-up").addClass("disabled")
-        } else {
-            currentPage++;
+        //điểu khiển page
+        $(".page-number").click(function () {
             $(".page-down").removeClass("disabled")
-        }
-        listPageProduct = listProduct2.slice((currentPage - 1) * perPage, currentPage * perPage);
-        $('.page-number').removeClass("active");
-        render(listPageProduct);
-    })
+            $(".page-up").removeClass("disabled")
+            currentPage = $(this).data('id');
+            listPageProduct = listProduct2.slice((currentPage - 1) * perPage, currentPage * perPage);
+            $('.page-number').removeClass("active");
+            $(this).addClass("active")
+            if (currentPage == 1) {
+                $(".page-down").addClass("disabled")
+            }
+            if (currentPage == pageNumber) {
+                $(".page-up").addClass("disabled")
+            }
+            render(listPageProduct);
 
+        })
+
+        $(".page-down").click(function () {
+            if (currentPage == 2) {
+                currentPage--;
+                $(".page-down").addClass("disabled")
+                $(".page-up").removeClass("disabled")
+            } else {
+                currentPage--;
+                $(".page-up").removeClass("disabled")
+            }
+            listPageProduct = listProduct2.slice((currentPage - 1) * perPage, currentPage * perPage);
+            $('.page-number').removeClass("active");
+            render(listPageProduct);
+        })
+
+        $(".page-up").click(function () {
+            if (currentPage == (pageNumber - 1)) {
+                currentPage++;
+                $(".page-up").addClass("disabled")
+                $(".page-down").removeClass("disabled")
+            } else {
+                currentPage++;
+                $(".page-down").removeClass("disabled")
+            }
+            listPageProduct = listProduct2.slice((currentPage - 1) * perPage, currentPage * perPage);
+            $('.page-number').removeClass("active");
+            render(listPageProduct);
+        })
+    }
+
+    //render modal
     function renderModal(a) {
         var htmlStar = "";
         for (let j = 0; j < a.rate; j++) {
@@ -234,15 +200,15 @@ $(document).ready(function () {
                             </div>
                             <div class="product-desc ms-4" style="width: 40%;">
                                 <div class="rate h4">
-                                    Đánh giá:
+                                    Đánh giá:</br>
                                     ${htmlStar}
                                 </div>
-                                <div class="desc text-blue">${a.des}</div>
-                                <div class="price h3 text-gold">${a.price}</div>
+                                <div class="desc h4 text-blue mt-4">${a.des}</div>
+                                <div class="price h4 text-gold mt-4">COST: ${a.price.toLocaleString('vi', { style: 'currency', currency: 'VND' })}</div>
                             </div>
                         </div>
                         <div class="product-details-desc">
-                            <ul class="list-details-desc d-flex ps-0 mb-0">
+                            <ul class="list-details-desc d-flex ps-0 mb-0 ">
                                 <li class="text-gold h3">Đặc trưng <span class="text-gold h3">|</span></li>
                                 <li class="text-gold h3">Thông số <span class="text-gold h3">|</span></li>
                                 <li class="text-gold h3">Bảo quản <span class="text-gold h3">|</span></li>
@@ -279,5 +245,129 @@ $(document).ready(function () {
             arrows: false
         });
     }
+    listPageProduct = listProduct2.slice((currentPage - 1) * perPage, currentPage * perPage);
+    render(listPageProduct);
+    rederPagination();
+
+    //filter price
+    // filter dưới 5tr
+    $("#less5m").click(function () {
+        currentPage = 1;
+        listProduct2 = listProduct.slice()
+        listProduct2 = listProduct2.filter(function (item) {
+            return item.price < 5000000;
+        })
+        pageNumber = Math.ceil(listProduct2.length / perPage);
+        listPageProduct = listProduct2.slice((currentPage - 1) * perPage, currentPage * perPage);
+        render(listPageProduct);
+        rederPagination();
+    })
+
+    $("#5mTo10m").click(function () {
+        currentPage = 1;
+        listProduct2 = listProduct.slice()
+        listProduct2 = listProduct2.filter(function (item) {
+            return item.price > 5000000 && item.price < 10000000;
+        })
+        pageNumber = Math.ceil(listProduct2.length / perPage);
+        listPageProduct = listProduct2.slice((currentPage - 1) * perPage, currentPage * perPage);
+        render(listPageProduct);
+        rederPagination();
+    })
+
+    $("#10mTo15m").click(function () {
+        currentPage = 1;
+        listProduct2 = listProduct.slice()
+        listProduct2 = listProduct2.filter(function (item) {
+            return item.price > 10000000 && item.price < 15000000;
+        })
+        pageNumber = Math.ceil(listProduct2.length / perPage);
+        listPageProduct = listProduct2.slice((currentPage - 1) * perPage, currentPage * perPage);
+        render(listPageProduct);
+        rederPagination();
+    })
+
+    $("#more15m").click(function () {
+        currentPage = 1;
+        listProduct2 = listProduct.slice()
+        listProduct2 = listProduct2.filter(function (item) {
+            return item.price > 15000000;
+
+        })
+        pageNumber = Math.ceil(listProduct2.length / perPage);
+        listPageProduct = listProduct2.slice((currentPage - 1) * perPage, currentPage * perPage);
+        render(listPageProduct);
+        rederPagination();
+    })
+
+    //sắp xếp theo rate
+    $("#sortRate").click(function () {
+        currentPage = 1;
+        //copy array object;
+        listProduct2 = listProduct.slice()
+        listProduct2 = listProduct2.sort(function (a, b) {
+            return b.rate - a.rate
+        })
+        pageNumber = Math.ceil(listProduct2.length / perPage);
+        listPageProduct = listProduct2.slice((currentPage - 1) * perPage, currentPage * perPage);
+        render(listPageProduct)
+        rederPagination();
+    })
+
+    //mặc định
+    $("#sortDefault").click(function () {
+        currentPage = 1;
+        listProduct2 = listProduct.slice();
+        pageNumber = Math.ceil(listProduct2.length / perPage);
+        listPageProduct = listProduct2.slice((currentPage - 1) * perPage, currentPage * perPage);
+        render(listPageProduct)
+        rederPagination();
+    })
+
+    //theo tên
+    $("#sortName").click(function () {
+        currentPage = 1;
+        //copy array object;
+        listProduct2 = listProduct.slice()
+
+        listProduct2 = listProduct2.sort(function (a, b) {
+            if (a.title <= b.title) { return -1; }
+            else {
+                return 1;
+            }
+        })
+        pageNumber = Math.ceil(listProduct2.length / perPage);
+        listPageProduct = listProduct2.slice((currentPage - 1) * perPage, currentPage * perPage);
+        render(listPageProduct)
+        rederPagination();
+    })
+
+    //giá tăng dần
+    $("#sortPriceASC").click(function () {
+        currentPage = 1;
+        //copy array object;
+        listProduct2 = listProduct.slice()
+        listProduct2 = listProduct2.sort(function (a, b) {
+            return a.price - b.price
+        })
+        pageNumber = Math.ceil(listProduct2.length / perPage);
+        listPageProduct = listProduct2.slice((currentPage - 1) * perPage, currentPage * perPage);
+        render(listPageProduct)
+        rederPagination();
+    })
+
+    //giá giảm dần
+    $("#sortPriceDESC").click(function () {
+        currentPage = 1;
+        //copy array object;
+        listProduct2 = listProduct.slice()
+        listProduct2 = listProduct2.sort(function (a, b) {
+            return b.price - a.price
+        })
+        pageNumber = Math.ceil(listProduct2.length / perPage);
+        listPageProduct = listProduct2.slice((currentPage - 1) * perPage, currentPage * perPage);
+        render(listPageProduct);
+        rederPagination();
+    })
 
 })

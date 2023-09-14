@@ -1,0 +1,395 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 14px;
+    color: #222;
+    font-family: 'font-medium';
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* header */
+header nav {
+    display: flex;
+    align-items: center;
+    width: calc(12*100%/18);
+    margin: 0 auto;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+header nav .menu {
+    display: flex;
+    width: calc(7*100%/12);
+    justify-content: space-between;
+}
+
+header nav .menu-item a {
+    position: relative;
+    line-height: 2rem;
+    /* line-height: 2rem; */
+}
+
+header nav .selected::after,
+header nav .menu-item a:hover::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -0.5rem;
+    background-color: #bd945f;
+    height: 0.3rem;
+    width: 60%;
+}
+
+/* main  */
+#banner {
+    background-image: url(../images/lien-he/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 450px;
+    z-index: 1;
+    position: relative;
+}
+
+#banner img {
+    width: 10%;
+}
+
+#banner h1 {
+    font-family: 'font-ultra';
+    font-size: 3rem;
+    color: #fff;
+    margin-top: 1rem;
+}
+
+/* content */
+#content {
+    background-color: #f3f3f3;
+    padding-bottom: 5rem;
+}
+
+#content .container {
+    width: calc(12*100%/18);
+    margin: 0 auto;
+    background-color: #fff;
+    margin-top: -3rem;
+    position: relative;
+    z-index: 2;
+    padding: 3rem 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#content .container img {
+    width: calc((400%/12));
+}
+
+#content .container .form {
+    width: calc(500%/12);
+}
+
+#content .container .title-item {
+    font-size: 1.5rem;
+    color: #bd945f;
+    margin-bottom: 1rem;
+    font-family: 'font-ultra';
+}
+
+#content .container .item input {
+    padding: 1rem;
+    margin-top: 0.5rem;
+    border: 1px solid #bd945f;
+    color: #2c2e53;
+}
+
+#content .container .item .input{
+    width: 100%;
+}
+
+#content .container .item .btn {
+    background-color: #bd945f;
+    color: #fff;
+    width: 20%;
+    cursor: pointer;
+}
+
+/* footer */
+footer {
+    margin-top: auto;
+    background-color: #363636;
+    padding: 2rem 0;
+}
+
+footer .container {
+    display: flex;
+    width: calc(12*100%/18);
+    margin: 0 auto;
+    justify-content: space-between;
+    padding: 1rem;
+    line-height: 1.5rem;
+    background-color: #363636;
+}
+
+footer .title {
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+footer .title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    height: 0.2rem;
+    width: 5rem;
+}
+
+footer li,
+footer a,
+footer .title,
+footer i {
+    color: #fff;
+}
+
+footer li,
+footer a {
+    font-family: 'font-thin';
+}
+
+footer .contact ul li:first-child {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+footer .contact ul li div {
+    width: 3rem;
+    margin-right: 1rem;
+}
+
+footer .contact ul li div img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+footer .contact ul li:last-child div {
+    width: 10rem;
+}
+
+
+/* reponsive */
+
+/* `xxl` applies to x-large devices (large desktops, less than 1400px) */
+@media (max-width: 1399.98px) {}
+
+/* `xl` applies to large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+    * {
+        font-size: 12px;
+    }
+
+    header nav .menu {
+        width: calc(9*100%/12);
+    }
+
+    .container {
+        width: calc(9*100%/12) !important;
+    }
+
+    /* main */
+    /* banner */
+    #banner {
+        height: 400px;
+    }
+
+}
+
+/* `lg` applies to medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+    * {
+        font-size: 12px;
+    }
+
+    header nav {
+        flex-direction: column;
+        width: 100%;
+        padding-left: 0;
+        padding-bottom: 0;
+        padding-right: 0;
+    }
+
+    header nav .menu {
+        display: none;
+    }
+
+    header .logo {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        align-items: center;
+    }
+
+    header .logo img {
+        width: 10% !important;
+        padding-bottom: 1rem;
+    }
+
+    header nav .responsive-menu {
+        margin-top: 0.5rem;
+        display: block;
+        width: 100%;
+        background-color: #bd945f;
+        animation: xx 300ms ease-in-out;
+        transform-origin: top center;
+    }
+
+    header nav .responsive-menu>.menu-item {
+
+        animation: yy 800ms ease-in-out;
+        transform-origin: left;
+        /* animation-delay: 500ms; */
+    }
+
+    header nav .responsive-menu .menu-item {
+        padding: 0 2rem;
+    }
+
+    header nav .responsive-menu .menu-item a {
+        color: #f3f3f3;
+        border-bottom: 1px solid #f3f3f3;
+        display: block;
+        line-height: 3.2rem;
+    }
+
+    header nav .responsive-menu .menu-item:last-child a {
+        border-bottom: none !important;
+    }
+
+    .fa-bars {
+        display: block !important;
+    }
+
+    @keyframes xx {
+        0% {
+            transform: rotateX(-90deg);
+        }
+
+        100% {
+            transform: rotateX(0deg);
+        }
+    }
+
+    @keyframes yy {
+        0% {
+            transform: rotateY(-90deg);
+        }
+
+        100% {
+            transform: rotateY(0deg);
+        }
+    }
+
+    /* banner */
+    #banner {
+        height: 350px;
+    }
+
+    #content .container .title-item {
+        font-size: 1.5rem;
+        color: #bd945f;
+        margin-bottom: 0.5rem;
+        font-family: 'font-ultra';
+    }
+
+    #content .container .item input {
+        padding: 0.5rem;
+        font-size: 1.2rem;
+    }
+
+}
+
+/* `md` applies to small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+
+    
+    /* banner */
+    #banner {
+        height: 300px;
+    }
+    /* content  */
+    #content .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #content .container img {
+        width: 60%;
+    }
+
+    #content .container .form {
+        margin-top: 2rem;
+        width: 60%;
+        text-align: center;
+    }
+
+    #content .container .item input {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+
+
+}
+
+/* `sm` applies to x-small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    * {
+        font-size: 10px;
+    }
+
+    /* banner */
+    #banner {
+        height: 200px;
+    }
+
+    #banner h1 {
+        font-size: 2rem;
+    }
+
+    #content .container .form,
+    #content .container img {
+        width: 80%;
+    }
+
+    #content .container .item input {
+        padding: 0.7rem;
+        font-size: 1rem;
+    }
+
+    /* footer  */
+    footer .container {
+        flex-direction: column;
+    }
+
+    footer .container .aboutUs,
+    footer .container .contact {
+        margin-top: 1rem;
+    }
+}
