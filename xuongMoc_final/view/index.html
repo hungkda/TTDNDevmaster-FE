@@ -32,6 +32,7 @@
             <div class="navbar-logo w-25">
                 <img src="../images/logo.png" alt=" " class="">
             </div>
+            <!-- <i class="fa-solid fa-bars d-block d-none" onclick="handleClickMenu()"></i> -->
             <ul class="navbar-menu d-flex justify-content-between w-50">
                 <li class="menu-item selected">
                     <a href="../view/index.html">TRANG CHỦ</a>
@@ -65,7 +66,7 @@
             <div class="introduction container p-0 m-auto">
                 <div class="text-blue h1 font-ultra">THẾ GIỚI NỘI THẤT SỐ 1 VIỆT NAM</div>
                 <div class="text-gold h1 font-ultra">HOÀNG HOAN</div>
-                <p class="w-50">Sứ mệnh của chúng tôi là kết hợp hài hòa giữa ý tưởng và mong muốn của
+                <p class="w-50 text-justify">Sứ mệnh của chúng tôi là kết hợp hài hòa giữa ý tưởng và mong muốn của
                     khách hàng, đem lại những phút giây thư giãn tuyệt vời bên gia đình và những người thấn yêu</p>
                 <button class="btn btn-gold rounded-0 bg-gold px-4 py-2"><a href="../view/contact.html"
                         class="text-white">LIÊN
@@ -75,175 +76,178 @@
         <!-- END: Banner -->
 
         <!-- BEGIN: Product -->
-        <section class="product bg-f3f3f3">
+        <section class="product bg-f3f3f3 pb-5">
             <div class="container">
-                <div class="category d-flex flex-wrap row bg-white text-center">
-                    <div class="category-item col-lg-3 col-sm-6 col-sm-6">
+                <div class="category d-flex flex-wrap row text-center container-category z-3 bg-white py-3">
+                    <div class="col-lg-3 col-sm-6">
                         <a href="../view/all-products.html">
                             <img src="../images/loai-sp/icon-phong-khach.png" alt="">
-                            <p>Phòng khách</p>
+                            <p class="text-blue font-ultra">Phòng khách</p>
                         </a>
                     </div>
-                    <div class="category-item col-lg-3 col-sm-6">
+                    <div class="col-lg-3 col-sm-6">
                         <a href="../view/all-products.html">
                             <img src="../images/loai-sp/icon-phong-ngu.png" alt="">
-                            <p>Phòng ngủ</p>
+                            <p class="text-blue font-ultra">Phòng ngủ</p>
                         </a>
                     </div>
-                    <div class="category-item col-lg-3 col-sm-6">
+                    <div class="col-lg-3 col-sm-6">
                         <a href="../view/all-products.html">
                             <img src="../images/loai-sp/icon-phong-bep.png" alt="">
-                            <p>Phòng bếp</p>
+                            <p class="text-blue font-ultra">Phòng bếp</p>
                         </a>
                     </div>
-                    <div class="category-item col-lg-3 col-sm-6">
+                    <div class="col-lg-3 col-sm-6">
                         <a href="../view/all-products.html">
                             <img src="../images/loai-sp/icon-phong-tam.png" alt="">
-                            <p>Phòng tắm</p>
+                            <p class="text-blue font-ultra">Phòng tắm</p>
                         </a>
                     </div>
-                    <div class="category-item col-lg-3 col-sm-6">
+                    <div class="col-lg-3 col-sm-6">
                         <a href="../view/all-products.html">
                             <img src="../images/loai-sp/icon-tre-em.png" alt="">
-                            <p>Trẻ em</p>
+                            <p class="text-blue font-ultra">Trẻ em</p>
                         </a>
                     </div>
-                    <div class="category-item col-lg-3 col-sm-6">
+                    <div class="col-lg-3 col-sm-6">
                         <a href="../view/all-products.html">
                             <img src="../images/loai-sp/icon-van-phong.png" alt="">
-                            <p>Văn phòng</p>
+                            <p class="text-blue font-ultra">Văn phòng</p>
                         </a>
                     </div>
-                    <div class="category-item col-lg-3 col-sm-6">
+                    <div class="col-lg-3 col-sm-6">
                         <a href="../view/all-products.html">
                             <img src="../images/loai-sp/icon-cau-thang.png" alt="">
-                            <p>Cầu thang</p>
+                            <p class="text-blue font-ultra">Cầu thang</p>
                         </a>
                     </div>
-                    <div class="category-item col-lg-3 col-sm-6">
+                    <div class="col-lg-3 col-sm-6">
                         <a href="../view/all-products.html">
                             <img src="../images/loai-sp/icon-do-trang-tri.png" alt="">
-                            <p>Đồ trang trí</p>
+                            <p class="text-blue font-ultra">Đồ trang trí</p>
                         </a>
                     </div>
                 </div>
 
-                <div class="hot-product">
-                    <h1>
+                <div class="hot-product text-center mt-5rem">
+                    <div class="title-index h2 font-ultra text-blue d-inline">
                         SẢN PHẨM NỔI BẬT
-                    </h1>
+                    </div>
 
-                    <ul class="slide-product">
-                        <li class="item-hot-product">
-                            <a href="../view/product-details-1.html">
-                                <img src="../images/san-pham-noi-bat/sp-1.jpg" alt="">
-                                <h3>GiƯỜNG CHÂU ÂU</h3>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <p class="des">(Size lớn, trắng sữa)</p>
+                    <ul class="slide-product mt-5">
+                        <li class="item-hot-product m-auto">
+                            <a href="../view/all-products.html">
+                                <img class="w-80 m-auto" src="../images/san-pham-noi-bat/sp-1.jpg" alt="">
+                                <div class="h4 mt-3 text-blue font-ultra">GiƯỜNG CHÂU ÂU</div>
+                                <i class="fa-solid fa-star text-gold"></i>
+                                <i class="fa-solid fa-star text-gold"></i>
+                                <i class="fa-solid fa-star text-gold"></i>
+                                <i class="fa-solid fa-star text-gold"></i>
+                                <i class="fa-solid fa-star text-gold"></i>
+                                <p class="mb-0 text-secondary">(Size lớn, trắng sữa)</p>
                                 <p class="cost">9.999.000 VNĐ</p>
                             </a>
                         </li>
-                        <li class="item-hot-product">
-                            <a href="../view/product-details-1.html">
-                                <img src="../images/san-pham-noi-bat/sp-2.jpg" alt="">
-                                <h3>BÀN LÀM VIỆC</h3>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <p class="des">(Size vừa, trắng nâu)</p>
+                        <li class="item-hot-product m-auto">
+                            <a href="../view/all-products.html">
+                                <img class="w-80 m-auto" src="../images/san-pham-noi-bat/sp-2.jpg" alt="">
+                                <div class="h4 mt-3 text-blue font-ultra">BÀN LÀM VIỆC</div>
+                                <i class="fa-solid fa-star text-gold"></i>
+                                <i class="fa-solid fa-star text-gold"></i>
+                                <i class="fa-solid fa-star text-gold"></i>
+                                <i class="fa-solid fa-star text-gold"></i>
+                                <i class="fa-solid fa-star text-gold"></i>
+                                <p class="mb-0 text-secondary">(Size vừa, trắng nâu)</p>
                                 <p class="cost">3.999.000 VNĐ</p>
                             </a>
                         </li>
-                        <li class="item-hot-product">
-                            <a href="../view/product-details-1.html">
-                                <img src="../images/san-pham-noi-bat/sp-3.jpg" alt="">
-                                <h3>TỦ QUẦN ÁO</h3>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <p class="des">(4 ngăn, trắng gỗ)</p>
+                        <li class="item-hot-product m-auto">
+                            <a href="../view/all-products.html">
+                                <img class="w-80 m-auto" src="../images/san-pham-noi-bat/sp-3.jpg" alt="">
+                                <div class="h4 mt-3 text-blue font-ultra">TỦ QUẦN ÁO</div>
+                                <i class="fa-solid fa-star text-gold"></i>
+                                <i class="fa-solid fa-star text-gold"></i>
+                                <i class="fa-solid fa-star text-gold"></i>
+                                <i class="fa-solid fa-star text-gold"></i>
+                                <i class="fa-solid fa-star text-gold"></i>
+                                <p class="mb-0 text-secondary">(4 ngăn, trắng gỗ)</p>
                                 <p class="cost">12.999.000 VNĐ</p>
                             </a>
                         </li>
-                        <li class="item-hot-product ">
-                            <a href="../view/product-details-1.html">
-                                <img src="../images/san-pham-noi-bat/sp-4.jpg" alt="">
-                                <h3>KỆ ĐỂ ĐỒ</h3>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <p class="des">(4 ngăn, trắng gỗ)</p>
+                        <li class="item-hot-product m-auto ">
+                            <a href="../view/all-products.html">
+                                <img class="w-80 m-auto" src="../images/san-pham-noi-bat/sp-4.jpg" alt="">
+                                <div class="h4 mt-3 text-blue font-ultra">KỆ ĐỂ ĐỒ</div>
+                                <i class="fa-solid fa-star text-gold"></i>
+                                <i class="fa-solid fa-star text-gold"></i>
+                                <i class="fa-solid fa-star text-gold"></i>
+                                <i class="fa-solid fa-star text-gold"></i>
+                                <i class="fa-solid fa-star text-gold"></i>
+                                <p class="mb-0 text-secondary">(4 ngăn, trắng gỗ)</p>
                                 <p class="cost">2.999.000 VNĐ</p>
                             </a>
                         </li>
-                        <li class="item-hot-product">
-                            <a href="../view/product-details-1.html">
-                                <img src="../images/san-pham-noi-bat/sp-4.jpg" alt="">
-                                <h3>KỆ ĐỂ ĐỒ</h3>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <p class="des">(4 ngăn, trắng gỗ)</p>
+                        <li class="item-hot-product m-auto">
+                            <a href="../view/all-products.html">
+                                <img class="w-80 m-auto" src="../images/san-pham-noi-bat/sp-4.jpg" alt="">
+                                <div class="h4 mt-3 text-blue font-ultra">KỆ ĐỂ ĐỒ</div>
+                                <i class="fa-solid fa-star text-gold"></i>
+                                <i class="fa-solid fa-star text-gold"></i>
+                                <i class="fa-solid fa-star text-gold"></i>
+                                <i class="fa-solid fa-star text-gold"></i>
+                                <i class="fa-solid fa-star text-gold"></i>
+                                <p class="mb-0 text-secondary">(4 ngăn, trắng gỗ)</p>
                                 <p class="cost">2.999.000 VNĐ</p>
                             </a>
                         </li>
-
                     </ul>
                 </div>
             </div>
-
         </section>
         <!-- END: Product -->
 
         <!-- BEGIN: ABOUTUS -->
         <section class="aboutUs">
             <div class="container">
-                <div class="about">
-                    <h1>
-                        VỀ CHÚNG TÔI
-                    </h1>
+                <div class="about pt-5">
+                    <div class="text-center mt-5">
+                        <div class="title-index d-inline h2 font-ultra text-white">
+                            VỀ CHÚNG TÔI
+                        </div>
+                    </div>
 
-                    <div class="content">
-                        <div class="img-content">
-                            <img src="../images/ve-chung-toi/ve-chung-toi.jpg" alt="">
+                    <div class="row mt-5">
+                        <div class="col-lg-6">
+                            <img class="w-100" src="../images/ve-chung-toi/ve-chung-toi.jpg" alt="">
                         </div>
 
-                        <div class="about-content">
-                            <h2 class="title">NỘI THẤT <span>HOÀNG HÀ</span>
+                        <div class="col-lg-6 mt-lg-0 mt-3">
+                            <div class="h3 text-white">NỘI THẤT <span class="font-ultra h3">HOÀNG HÀ</span>
                                 <br>UY TÍN XONG HÀNH CHẤT LƯỢNG
-                            </h2>
-                            <p>
+                            </div>
+                            <p class="text-white mt-xl-5 text-justify">
                                 Sứ mệnh của chúng tôi là kết hợp hài hòa giữa ý tưởng và mong muốn của khách hàng, đem
                                 lại những phút giây thư giãn tuyệt vời bên gia đình và những người thấn yêu
                             </p>
-                            <p>
+                            <p class="text-white text-justify">
                                 Sứ mệnh của chúng tôi là kết hợp hài hòa giữa ý tưởng và mong muốn của khách hàng, đem
                                 lại những phút giây thư giãn tuyệt vời bên gia đình và những người thấn yêu. Sứ mệnh của
                                 chúng
                             </p>
-                            <ul class="list-about">
-                                <li class="list-about-item"><img src="../images/ve-chung-toi/ve-chung-toi-1.jpg" alt="">
+                            <ul class="row ps-0 mt-xl-5">
+                                <li class="col-3"><img class="w-100" src="../images/ve-chung-toi/ve-chung-toi-1.jpg"
+                                        alt="">
                                 </li>
-                                <li class="list-about-item"><img src="../images/ve-chung-toi/ve-chung-toi-2.jpg" alt="">
+                                <li class="col-3"><img class="w-100" src="../images/ve-chung-toi/ve-chung-toi-2.jpg"
+                                        alt="">
                                 </li>
-                                <li class="list-about-item"><img src="../images/ve-chung-toi/ve-chung-toi-3.jpg" alt="">
+                                <li class="col-3"><img class="w-100" src="../images/ve-chung-toi/ve-chung-toi-3.jpg"
+                                        alt="">
                                 </li>
-                                <li class="list-about-item">
+                                <li class="col-3 position-relative">
                                     <a href="../view/product.html">
-                                        <img src="../images/ve-chung-toi/ve-chung-toi-4.jpg" alt="">
-                                        <p class="more">Xem thêm &gt;</p>
+                                        <img class="w-100" src="../images/ve-chung-toi/ve-chung-toi-4.jpg" alt="">
+                                        <p class="more text-white position-absolute">Xem thêm &gt;</p>
                                     </a>
                                 </li>
 
@@ -253,38 +257,48 @@
                     </div>
                 </div>
 
-                <div class="whyChooseUs">
-                    <h1>
-                        TẠI SAO NÊN CHỌN HOÀNG HÀ
-                    </h1>
+                <div class="whyChooseUs mt-5 p-5">
+                    <div class="text-center">
+                        <div class="h2 font-ultra title-index d-inline text-white">
+                            TẠI SAO NÊN CHỌN HOÀNG HÀ
+                        </div>
+                    </div>
 
-                    <ul class="list-wCS">
-                        <li class="list-wCS-item">
-                            <img src="../images/ve-chung-toi/chinh-sach.jpg" alt="">
-                            <div class="list-wCS-item-text">
-                                <h3>CHÍNH SÁCH GIÁ</h3>
-                                <p>Tốt nhất và công khai trên website</p>
+                    <ul class="p-0 row mt-5">
+                        <li class="col-md-6 mt-4">
+                            <div class="bg-white d-flex align-items-center p-2">
+                                <img class="me-3" src="../images/ve-chung-toi/chinh-sach.jpg" alt="">
+                                <div class="list-wCS-item-text">
+                                    <div class="h4 mb-0 text-gold font-ultra">CHÍNH SÁCH GIÁ</div>
+                                    <p class="mb-0">Tốt nhất và công khai trên website</p>
+                                </div>
                             </div>
                         </li>
-                        <li class="list-wCS-item">
-                            <img src="../images/ve-chung-toi/san-pham.jpg" alt="">
-                            <div class="list-wCS-item-text">
-                                <h3>SẢN PHẨM</h3>
-                                <p>Trực tiếp sản xuất bởi đội ngũ nhân viên hàng đầu</p>
+                        <li class="col-md-6 mt-4">
+                            <div class="bg-white d-flex align-items-center p-2">
+                                <img class="me-3" src="../images/ve-chung-toi/san-pham.jpg" alt="">
+                                <div class="list-wCS-item-text">
+                                    <div class="h4 mb-0 text-gold font-ultra">SẢN PHẨM</div>
+                                    <p class="mb-0">Trực tiếp sản xuất bởi đội ngũ nhân viên hàng đầu</p>
+                                </div>
                             </div>
                         </li>
-                        <li class="list-wCS-item">
-                            <img src="../images/ve-chung-toi/chat-luong.jpg" alt="">
-                            <div class="list-wCS-item-text">
-                                <h3>CHẤT LƯỢNG</h3>
-                                <p>Cam kết chất lượng sản phẩm và tiến độ thi công</p>
+                        <li class="col-md-6 mt-4">
+                            <div class="bg-white d-flex align-items-center p-2">
+                                <img class="me-3" src="../images/ve-chung-toi/chat-luong.jpg" alt="">
+                                <div class="list-wCS-item-text">
+                                    <div class="h4 mb-0 text-gold font-ultra">CHẤT LƯỢNG</div>
+                                    <p class="mb-0">Cam kết chất lượng sản phẩm và tiến độ thi công</p>
+                                </div>
                             </div>
                         </li>
-                        <li class="list-wCS-item">
-                            <img src="../images/ve-chung-toi/bao-hanh.jpg" alt="">
-                            <div class="list-wCS-item-text">
-                                <h3>BẢO HÀNH</h3>
-                                <p>Dịch vụ bảo hành tốt nhất khu vực</p>
+                        <li class="col-md-6 mt-4">
+                            <div class="bg-white d-flex align-items-center p-2">
+                                <img class="me-3" src="../images/ve-chung-toi/bao-hanh.jpg" alt="">
+                                <div class="list-wCS-item-text">
+                                    <div class="h4 mb-0 text-gold font-ultra">BẢO HÀNH</div>
+                                    <p class="mb-0">Dịch vụ bảo hành tốt nhất khu vực</p>
+                                </div>
                             </div>
                         </li>
                     </ul>
@@ -294,17 +308,20 @@
         <!-- END: ABOUTUS -->
 
         <!-- BEGIN: NEWS -->
-        <section class="_news">
+        <section class="news-a-partner mt-5rem">
             <div class="container">
                 <div class="news">
-                    <h1>TIN TỨC</h1>
-                    <div class="container-news">
-                        <div class="main-news">
-                            <div>
-                                <img src="../images/tin-tuc/tintuc-1.jpg" alt="">
-                                <div class="main-news-text">
-                                    <h3>Cách chọn sofa cho khách sạn nhà bạn thêm</h3>
-                                    <p>
+                    <div class="text-center">
+                        <div class="title-index d-inline h2 text-blue font-ultra">TIN TỨC</div>
+                    </div>
+                    <div class="mt-5 row justify-content-between">
+                        <div class="main-news col-lg-7 pe-lg-0">
+                            <div class="me-lg-5 position-relative">
+                                <img class="w-100" src="../images/tin-tuc/tintuc-1.jpg" alt="">
+                                <div class="position-absolute bottom-0 bg-gold p-3 text-justify">
+                                    <div class="h3 text-white">Cách chọn sofa cho khách sạn nhà bạn thêm phần trang
+                                        trọng</div>
+                                    <p class="">
                                         Sứ mệnh của chúng tôi là kết hợp hài hòa giữa ý tưởng và mong muốn của khách
                                         hàng,
                                         đem
@@ -313,57 +330,63 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="list-news">
-                            <div class="list-news-item">
-                                <img src="../images/tintuc-2.jpg" alt="" class="news-item-image">
-                                <div class="news-item-text">
-                                    <h3>Cách chọn sofa cho khách sạn nhà bạn thêm</h3>
-                                    <p>
+                        <div class="list-news col-lg-5 ps-lg-0 row ms-0 mt-4 mt-lg-0">
+                            <div class="col-4 col-lg-12 mb-xl-5 mb-2 d-flex flex-column flex-lg-row">
+                                <img class="col-lg-4 pe-lg-3" src="../images/tintuc-2.jpg" alt=""
+                                    class="news-item-image">
+                                <div class="col-lg-8">
+                                    <div class="h4 text-gold">Cách chọn sofa cho khách sạn nhà bạn</div>
+                                    <p class="">
                                         Sứ mệnh của chúng tôi là kết hợp hài hòa giữa ý tưởng và mong muốn của khách
                                         hàng
                                     </p>
                                 </div>
                             </div>
-                            <div class="list-news-item">
-                                <img src="../images/tintuc-3.jpg" alt="" class="news-item-image">
-                                <div class="news-item-text">
-                                    <h3>Cách chọn sofa cho khách sạn nhà bạn thêm</h3>
-                                    <p>
+                            <div class="col-4 col-lg-12 mb-xl-5 mb-2 d-flex flex-column flex-lg-row">
+                                <img class="col-lg-4 pe-lg-3" src="../images/tintuc-3.jpg" alt=""
+                                    class="news-item-image">
+                                <div class="col-lg-8">
+                                    <div class="h4 text-gold">Cách chọn sofa cho khách sạn nhà bạn</div>
+                                    <p class="">
                                         Sứ mệnh của chúng tôi là kết hợp hài hòa giữa ý tưởng và mong muốn của khách
                                         hàng
                                     </p>
                                 </div>
                             </div>
-                            <div class="list-news-item">
-                                <img src="../images/tintuc-4.jpg" alt="" class="news-item-image">
-                                <div class="news-item-text">
-                                    <h3>Cách chọn sofa cho khách sạn nhà bạn thêm</h3>
-                                    <p>
+                            <div class="col-4 col-lg-12 mb-xl-5 mb-2 d-flex flex-column flex-lg-row">
+                                <img class="col-lg-4 pe-lg-3" src="../images/tintuc-4.jpg" alt=""
+                                    class="news-item-image">
+                                <div class="col-lg-8">
+                                    <div class="h4 text-gold">Cách chọn sofa cho khách sạn nhà bạn</div>
+                                    <p class="">
                                         Sứ mệnh của chúng tôi là kết hợp hài hòa giữa ý tưởng và mong muốn của khách
                                         hàng
+                                    </p>
                                 </div>
                             </div>
-                            <div class="more">
-                                <a href="../view/news.html">Xem thêm
-                                    <i class="fa-solid fa-arrow-right"></i>
+                            <div class="more d-flex justify-content-end justify-content-lg-start">
+                                <a href="../view/news.html" class="text-gold h4">Xem thêm
+                                    <i class="fa-solid fa-arrow-right text-gold"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="partner">
-                    <h1>
-                        ĐỐI TÁC
-                    </h1>
-                    <div>
-                        <img src="../images/doi-tac/vinpearl.png" alt="">
-                        <img src="../images/doi-tac/muong-thanh.png" alt="">
-                        <img src="../images/doi-tac/sheraton.png" alt="">
-                        <img src="../images//doi-tac/the-coffee-house.png" alt="">
-                        <img src="../images/doi-tac/marvella.png" alt="">
-                        <img src="../images/doi-tac/sunrise-sapa.png" alt="">
-                        <img src="../images/doi-tac/melissa.png" alt="">
+                <div class="partner mt-5rem">
+                    <div class="text-center">
+                        <div class="h2 title-index d-inline text-blue">
+                            ĐỐI TÁC
+                        </div>
+                    </div>
+                    <div class="d-flex mt-5">
+                        <img style="width: calc(100%/7);" src="../images/doi-tac/vinpearl.png" alt="">
+                        <img style="width: calc(100%/7);" src="../images/doi-tac/muong-thanh.png" alt="">
+                        <img style="width: calc(100%/7);" src="../images/doi-tac/sheraton.png" alt="">
+                        <img style="width: calc(100%/7);" src="../images//doi-tac/the-coffee-house.png" alt="">
+                        <img style="width: calc(100%/7);" src="../images/doi-tac/marvella.png" alt="">
+                        <img style="width: calc(100%/7);" src="../images/doi-tac/sunrise-sapa.png" alt="">
+                        <img style="width: calc(100%/7);" src="../images/doi-tac/melissa.png" alt="">
                     </div>
                 </div>
             </div>
@@ -371,23 +394,24 @@
         <!-- END: NEWS -->
 
         <!-- BEGIN: CONTACT -->
-        <section class="form-contact">
-            <form action="">
-                <img src="../images/lienhe-1-tachnen.png" alt="">
-                <div class="container">
-                    <div class="contact-text">
-                        <p>
+        <section class="form-contact position-relative">
+            <img class="position-absolute bottom-50" style="width: 15%;" src="../images/lienhe-1-tachnen.png" alt="">
+            <form action="" class="container">
+                <div class="container row justify-content-evenly" style="padding: 5rem 0;">
+                    <div class="contact-text col-12 col-lg-3">
+                        <p class="text-white h4">
                             Trải nghiệm dịch vụ &nbsp;
                         </p>
-                        <p class="bold">
+                        <p class="font-ultra h4 text-white">
                             cùng Hoàng Hoan ngay
                         </p>
                     </div>
-                    <div class="contact-form-input">
-                        <label for="tt">Thông tin liên hệ</label>
-                        <div class="input">
-                            <input type="text" name="" id="tt" placeholder="Email/Số điện thoại">
-                            <button>Gửi</button>
+                    <div class="contact-form-input col-12 col-lg-3">
+                        <label for="tt" class="text-white">Thông tin liên hệ</label>
+                        <div class="input-group">
+                            <input class="form-control p-2 rounded-0" type="text" name="" id="tt"
+                                placeholder="Email/Số điện thoại">
+                            <button class="ms-5 btn bg-white">Gửi</button>
                         </div>
 
                     </div>
@@ -399,7 +423,7 @@
 
     <!-- Begin: footer  -->
     <footer>
-        <div class="d-flex justify-content-between container mt-4">
+        <div class="d-flex flex-column flex-md-row justify-content-between container mt-4">
             <div>
                 <div class="title">
                     <span>THÔNG TIN CHUNG</span>

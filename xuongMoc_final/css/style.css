@@ -41,6 +41,10 @@ header .navbar .navbar-menu .menu-item:hover::after {
     color: #bd945f !important;
 }
 
+.bg-gold {
+    background-color: #bd945f !important;
+}
+
 .btn-gold {
     background-color: #bd945f !important;
 }
@@ -59,6 +63,10 @@ header .navbar .navbar-menu .menu-item:hover::after {
 
 .font-ultra {
     font-family: 'font-ultra';
+}
+
+.font-thin {
+    font-family: 'font-thin';
 }
 
 .title {
@@ -81,7 +89,34 @@ header .navbar .navbar-menu .menu-item:hover::after {
 .bg-f3f3f3 {
     background-color: #f3f3f3;
 }
+
+.mt-5rem {
+    margin-top: 5rem !important;
+}
+
+.w-80 {
+    width: 80% !important;
+}
+
+.text-justify {
+    text-align: justify;
+}
 /* index.html */
+.title-index {
+    font-family: 'font-ultra';
+    position: relative;
+}
+
+.title-index::after {
+    content: "";
+    position: absolute;
+    left: 20%;
+    right: 0;
+    bottom: -10px;
+    height: 0.5rem;
+    width: 60%;
+    background-color: #bd945f;
+}
 /* index banner */
 #index .banner{
     position: relative;
@@ -94,10 +129,60 @@ header .navbar .navbar-menu .menu-item:hover::after {
     top: 10%;
 }
 
-#index .introduction p {
-    text-align: justify;
+/* index category */
+#index .container-category {
+    margin-top: -3rem;
+        position: relative;
 }
 
+#index .slick-prev:before,
+#index .slick-next:before {
+    font-size: 2.86rem;
+    color: #bd945f;
+}
+
+#index .slick-prev {
+    left: -1.2rem;
+}
+/* index aboutUs */
+#index .aboutUs {
+    position: relative;
+}
+
+#index .aboutUs::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/ve-chung-toi/bg-about-us.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    filter: brightness(50%);
+}
+
+#index .aboutUs .container {
+    margin: 0 auto;
+    position: relative;
+}
+
+#index .aboutUs .more {
+    top: 40%;
+    right: 10%;
+}
+
+/* index contant  */
+
+.form-contact {
+    margin-top: 10rem;
+    position: relative;
+    background-image: url('../images/lienhe-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
 /* all-products.html*/
 /* all-products banner*/
 #all-products .banner .img-banner {
