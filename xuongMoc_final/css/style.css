@@ -110,17 +110,14 @@ header .navbar .navbar-menu .menu-item:hover::after {
 .title-index::after {
     content: "";
     position: absolute;
-    left: 20%;
-    right: 0;
+    left: 45%;
+    right: 45%;
     bottom: -10px;
     height: 0.5rem;
-    width: 60%;
+    width: 10%;
     background-color: #bd945f;
 }
 /* index banner */
-#index .banner{
-    position: relative;
-}
 
 #index .introduction {
     position: absolute;
@@ -132,7 +129,6 @@ header .navbar .navbar-menu .menu-item:hover::after {
 /* index category */
 #index .container-category {
     margin-top: -3rem;
-        position: relative;
 }
 
 #index .slick-prev:before,
@@ -182,6 +178,26 @@ header .navbar .navbar-menu .menu-item:hover::after {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
+}
+
+/* introduction.html */
+/* introduction banner  */
+#introdution .banner {
+    background-image: url(../images/gioi-thieu/banner-gt.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    height: 450px;
+    z-index: 1;
+}
+
+/* introduction content  */
+#introdution .content>.container{
+    margin-top: -3rem;
+}
+
+#introdution .content .item-mission {
+    border: 4px solid #bd945f;
 }
 /* all-products.html*/
 /* all-products banner*/
@@ -295,4 +311,26 @@ footer .contact img {
 
 footer .contact li:last-child {
     width: 11rem;
+}
+
+
+@media (max-width: 991.98px) {
+    header nav .responsive-menu {
+        margin-top: 0.5rem;
+        display: block !important;
+        background-color: #bd945f;
+    }
+
+    header nav .responsive-menu .menu-item a {
+        color: #f3f3f3;
+        border-bottom: 1px solid #f3f3f3;
+        display: block;
+        line-height: 3.2rem;
+    }
+
+    header .responsive-menu .selected::after,
+    header .responsive-menu .navbar-menu .menu-item:hover::after {
+        height: 1px;
+        background-color: #f3f3f3;
+    }
 }

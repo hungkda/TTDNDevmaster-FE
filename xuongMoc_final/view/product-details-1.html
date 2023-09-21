@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tất cả sản phẩm</title>
+
+    <!-- font-awesome  -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/product-details.css">
+</head>
+
+<body>
+    <!-- BEGIN: Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="../images/logo.png" alt="Logo" style="width: 80%;">
+                <i class="fa-solid fa-bars" style="display: none;" onclick="handleClickMenu()"></i>
+            </div>
+            <ul class="menu">
+                <li class="menu-item">
+                    <a href="../view/index.html">TRANG CHỦ</a>
+                </li>
+                <li class="menu-item">
+                    <a href="../view/introduction.html">GIỚI THIỆU</a>
+                </li>
+                <li class="menu-item">
+                    <a class="selected" href="../view/product.html">SẢN PHẨM</a>
+                </li>
+                <li class="menu-item">
+                    <a href="../view/news.html">TIN TỨC</a>
+                </li>
+                <li class="menu-item">
+                    <a href="../view/partner.html">ĐỐI TÁC</a>
+                </li>
+                <li class="menu-item">
+                    <a href="../view/contact.html">LIÊN HỆ</a>
+                </li>
+            </ul>
+
+        </nav>
+    </header>
+    <!-- END: Header -->
+
+    <main>
+        <!-- product  -->
+        <section id="product">
+            <div class="sub-nav">
+                <ul class="sub-nav-list">
+                    <li class="sub-nav-item">
+                        <a href="../view/index.html">Trang chủ</a>
+                    </li>
+                    <li class="sub-nav-item">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </li>
+                    <li class="sub-nav-item">
+                        <a href="../view/all-products.html">Phòng khác</a>
+                    </li>
+                    <li class="sub-nav-item">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </li>
+                    <li class="sub-nav-item">
+                        <a href="../view/product-details-1.html">Bàn uống nước</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- chi tiết sản phẩm  -->
+            <div class="product-details">
+                <div class="container">
+                    <div class="text">
+                        <p class="title">Bàn uống nước</p>
+                    </div>
+                    <div class="main-product-details">
+                        <div class="details-img">
+                            <div class="main-img slider-for">
+                                <img src="../images/san-pham/ban-uong-nuoc-1.png" alt="">
+                                <img src="../images/san-pham/ban-uong-nuoc-2.png" alt="">
+                                <img src="../images/san-pham/ban-uong-nuoc-3.png" alt="">
+                                <img src="../images/san-pham/ban-uong-nuoc-4.png" alt="">
+                            </div>
+                            <div class="sub-img slider-nav">
+                                <img src="../images/san-pham/ban-uong-nuoc-1.png" alt="">
+                                <img src="../images/san-pham/ban-uong-nuoc-2.png" alt="">
+                                <img src="../images/san-pham/ban-uong-nuoc-3.png" alt="">
+                                <img src="../images/san-pham/ban-uong-nuoc-4.png" alt="">
+                            </div>
+                        </div>
+                        <div class="details-text">
+                            <p>Chất liệu</p>
+                            <div class="type">
+                                <p class="color">Gỗ sồi</p>
+                                <p class="">Gỗ lim</p>
+                            </div>
+                            <div class="cost">
+                                <p class="sub-cost">12.999.000 VNĐ</p>
+                                <p class="main-cost">9.999.000 VNĐ</p>
+                            </div>
+                            <p class="protect">
+                                <img src="../images/san-pham/protect-icon.png" alt="">
+                                Bảo hành sản phẩm lên tới 36 tháng
+                            </p>
+                        </div>
+                    </div>
+                    <div class="des">
+                        <ul>
+                            <li class="selected">Đặc trưng</li>
+                            <li>Thông số</li>
+                            <li>Bảo quản</li>
+                            <li>Bảo hành</li>
+                            <li>Cam kết</li>
+                        </ul>
+
+                        <p>
+                            - Bàn cà phê cứng đơn giản với kệ mở <br>
+                            - Phong cách hình học tối giản <br>
+                            - Kệ bên trong có kích thước hoàn hảo cho tạp chí, đế lót ly và các phụ kiện phòng khách
+                            khác <br>
+                            - Có thể được sử dụng như một bàn TV thấp - Kệ mỏng hoàn hảo để chứa một hộp hàng đầu hoặc
+                            đầu phát blu-ray <br>
+                            - Làm bằng gỗ Sheesham cao cấp <br>
+                            - Không cần lắp ráp.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- sản phẩm tương tự -->
+            <div class="relate-product">
+                <div class="container">
+                    <div class="text">
+                        <p class="title">SẢN PHẨM TƯƠNG TỰ</p>
+                    </div>
+                    <ul class="list-product">
+                        <li class="product-item">
+                            <a href="../view/product-details-1.html">
+                                <img src="../images/san-pham/phongkhach-sp1.png" alt="">
+                                <h3>GiƯỜNG CHÂU ÂU</h3>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <p class="des">(Size lớn, trắng sữa)</p>
+                                <p class="cost">9.999.000 VNĐ</p>
+                            </a>
+                        </li>
+                        <li class="product-item">
+                            <a href="../view/product-details-1.html">
+                                <img src="../images/san-pham/phongkhach-sp2.png" alt="">
+                                <h3>GiƯỜNG CHÂU ÂU</h3>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <p class="des">(Size lớn, trắng sữa)</p>
+                                <p class="cost">3.999.000 VNĐ</p>
+                            </a>
+                        </li>
+                        <li class="product-item">
+                            <a href="../view/product-details-1.html">
+                                <img src="../images/san-pham/phongkhach-sp3.png" alt="">
+                                <h3>GiƯỜNG CHÂU ÂU</h3>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <p class="des">(Size lớn, trắng sữa)</p>
+                                <p class="cost">12.999.000 VNĐ</p>
+                            </a>
+                        </li>
+                        <li class="product-item ">
+                            <a href="../view/product-details-1.html">
+                                <img src="../images/san-pham/phongkhach-sp4.png" alt="">
+                                <h3>GiƯỜNG CHÂU ÂU</h3>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <p class="des">(Size lớn, trắng sữa)</p>
+                                <p class="cost">2.999.000 VNĐ</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- BEGIN: Footer -->
+    <footer>
+        <div class="container">
+            <div class="info">
+                <div class="title">
+                    THÔNG TIN CHUNG
+                </div>
+                <ul class="list-info">
+                    <li style="font-size: 1.2rem; font-family: 'font-medium' ;">CÔNG TY TNHH HOÀNG HOAN</li>
+                    <li><i class="fa-solid fa-phone">&nbsp;</i>0.999.999.99</li>
+                    <li><i class="fa-regular fa-envelope"></i>&nbsp;cskh@meocon.com</li>
+                    <li><i class="fa-solid fa-location-dot"></i>&nbsp;Nguyễn Trãi, Hà Nội</li>
+                </ul>
+            </div>
+
+            <div class="aboutUs">
+                <div class="title">
+                    VỀ CHÚNG TÔI
+                </div>
+                <ul class="list-pages">
+                    <li>
+                        <a href="../view/introduction.html">Giới thiệu</a>
+                    </li>
+                    <li>
+                        <a href="../view/product.html">Sản phẩm</a>
+                    </li>
+                    <li>
+                        <a href="../view/news.html">Tin tức</a>
+                    </li>
+                    <li>
+                        <a href="../view/partner.html">Đối tác</a>
+                    </li>
+                    <li>
+                        <a href="../view/contact.html">Liên hệ</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="contact">
+                <div class="title">
+                    KẾT NỐI VỚI CHÚNG TÔI
+                </div>
+                <ul class="">
+                    <li>
+                        <div>
+                            <img src="../images/facebook.png" alt="">
+                        </div>
+                        <div>
+                            <img src="../images/zalo.png" alt="">
+                        </div>
+                        <div>
+                            <img src="../images/mail.png" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="../images/xacnhan-bocongthong.png" alt="">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- END: Footer -->
+
+    <!-- slick -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        const handleClickMenu = () => {
+            document.querySelector(".menu").classList.toggle("responsive-menu")
+
+        }
+
+        $('.slider-for').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true,
+            fade: true,
+            asNavFor: '.slider-nav'
+        });
+        $('.slider-nav').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            asNavFor: '.slider-for',
+            arrows: false,
+            centerMode: true,
+            focusOnSelect: true
+        });
+    </script>
+
+</body>
+
+</html>

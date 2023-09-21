@@ -27,11 +27,12 @@
 <body>
     <!-- BEGIN: header -->
     <header>
-        <nav class="navbar container">
-            <div class="navbar-logo w-25">
+        <nav class="navbar container-fluid container-lg flex-column flex-lg-row py-0 py-lg-2">
+            <div class="navbar-logo col-12 col-lg-3 justify-content-between d-flex align-items-center px-5">
                 <img src="../images/logo.png" alt=" " class="">
+                <i class="fa-solid fa-bars d-block d-lg-none" onclick="handleClickMenu()"></i>
             </div>
-            <ul class="navbar-menu d-flex justify-content-between w-50">
+            <ul class="navbar-menu menu d-none d-lg-flex justify-content-between col-12 col-lg-6 mb-0">
                 <li class="menu-item">
                     <a href="../view/index.html">TRANG CHỦ</a>
                 </li>
@@ -48,7 +49,7 @@
                     <a href="../view/partner.html">ĐỐI TÁC</a>
                 </li>
                 <li class="menu-item">
-                    <a href="../view/contact.html">LIÊN HỆ</a>
+                    <a class="border-bottom-0" href="../view/contact.html">LIÊN HỆ</a>
                 </li>
             </ul>
         </nav>
@@ -304,12 +305,16 @@
                     slidesToShow: 4,
                     slidesToScroll: 1,
                     asNavFor: '.slider-for',
-                    dots: true,
+                    dots: false,
                     focusOnSelect: true,
                     arrows: false
                 });
             })
         });
+
+        const handleClickMenu = () => {
+            document.querySelector(".menu").classList.toggle("responsive-menu")
+        }
     </script>
     <!-- js -->
     <script src="../js/all-products.js"></script>

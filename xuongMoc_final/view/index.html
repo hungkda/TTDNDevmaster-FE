@@ -28,12 +28,12 @@
 <body>
     <!-- BEGIN: header -->
     <header>
-        <nav class="navbar container">
-            <div class="navbar-logo w-25">
+        <nav class="navbar container-fluid container-lg flex-column flex-lg-row py-0 py-lg-2">
+            <div class="navbar-logo col-12 col-lg-3 justify-content-between d-flex align-items-center px-5">
                 <img src="../images/logo.png" alt=" " class="">
+                <i class="fa-solid fa-bars d-block d-lg-none" onclick="handleClickMenu()"></i>
             </div>
-            <!-- <i class="fa-solid fa-bars d-block d-none" onclick="handleClickMenu()"></i> -->
-            <ul class="navbar-menu d-flex justify-content-between w-50">
+            <ul class="navbar-menu menu d-none d-lg-flex justify-content-between col-12 col-lg-6 mb-0">
                 <li class="menu-item selected">
                     <a href="../view/index.html">TRANG CHỦ</a>
                 </li>
@@ -50,7 +50,7 @@
                     <a href="../view/partner.html">ĐỐI TÁC</a>
                 </li>
                 <li class="menu-item">
-                    <a href="../view/contact.html">LIÊN HỆ</a>
+                    <a class="border-bottom-0" href="../view/contact.html">LIÊN HỆ</a>
                 </li>
             </ul>
         </nav>
@@ -59,7 +59,7 @@
 
     <main id="index">
         <!-- BEGIN: Banner -->
-        <section class="banner container-fluid p-0">
+        <section class="banner container-fluid p-0 position-relative">
             <div class="banner-img">
                 <img class="w-100" src="../images/banner.png" alt="">
             </div>
@@ -78,7 +78,8 @@
         <!-- BEGIN: Product -->
         <section class="product bg-f3f3f3 pb-5">
             <div class="container">
-                <div class="category d-flex flex-wrap row text-center container-category z-3 bg-white py-3">
+                <div
+                    class="category d-flex flex-wrap row text-center container-category z-3 bg-white py-3 position-relative">
                     <div class="col-lg-3 col-sm-6">
                         <a href="../view/all-products.html">
                             <img src="../images/loai-sp/icon-phong-khach.png" alt="">
@@ -129,12 +130,12 @@
                     </div>
                 </div>
 
-                <div class="hot-product text-center mt-5rem">
-                    <div class="title-index h2 font-ultra text-blue d-inline">
+                <div class="hot-product mt-5rem">
+                    <div class="title-index h2 font-ultra text-blue text-center">
                         SẢN PHẨM NỔI BẬT
                     </div>
 
-                    <ul class="slide-product mt-5">
+                    <ul class="slide-product mt-5 text-center">
                         <li class="item-hot-product m-auto">
                             <a href="../view/all-products.html">
                                 <img class="w-80 m-auto" src="../images/san-pham-noi-bat/sp-1.jpg" alt="">
@@ -210,10 +211,8 @@
         <section class="aboutUs">
             <div class="container">
                 <div class="about pt-5">
-                    <div class="text-center mt-5">
-                        <div class="title-index d-inline h2 font-ultra text-white">
-                            VỀ CHÚNG TÔI
-                        </div>
+                    <div class="title-index text-center mt-5 h2 font-ultra text-white">
+                        VỀ CHÚNG TÔI
                     </div>
 
                     <div class="row mt-5">
@@ -258,10 +257,8 @@
                 </div>
 
                 <div class="whyChooseUs mt-5 p-5">
-                    <div class="text-center">
-                        <div class="h2 font-ultra title-index d-inline text-white">
-                            TẠI SAO NÊN CHỌN HOÀNG HÀ
-                        </div>
+                    <div class="h2 font-ultra title-index text-center text-white">
+                        TẠI SAO NÊN CHỌN HOÀNG HÀ
                     </div>
 
                     <ul class="p-0 row mt-5">
@@ -311,9 +308,7 @@
         <section class="news-a-partner mt-5rem">
             <div class="container">
                 <div class="news">
-                    <div class="text-center">
-                        <div class="title-index d-inline h2 text-blue font-ultra">TIN TỨC</div>
-                    </div>
+                    <div class="title-index text-center h2 text-blue font-ultra">TIN TỨC</div>
                     <div class="mt-5 row justify-content-between">
                         <div class="main-news col-lg-7 pe-lg-0">
                             <div class="me-lg-5 position-relative">
@@ -374,10 +369,8 @@
                 </div>
 
                 <div class="partner mt-5rem">
-                    <div class="text-center">
-                        <div class="h2 title-index d-inline text-blue">
-                            ĐỐI TÁC
-                        </div>
+                    <div class="h2 title-index text-center text-blue">
+                        ĐỐI TÁC
                     </div>
                     <div class="d-flex mt-5">
                         <img style="width: calc(100%/7);" src="../images/doi-tac/vinpearl.png" alt="">

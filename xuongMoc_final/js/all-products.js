@@ -1,25 +1,25 @@
 $(document).ready(function () {
     var listProduct = [
-        { img: "sp1.png", title: "BÀN UỐNG NƯỚC", rate: 5, des: "(Size vừa, nâu đậm)", price: 1000000 },
-        { img: "sp2.png", title: "BÀN TI VI", rate: 5, des: "(Size vừa, xanh đậm)", price: 18999999 },
-        { img: "sp3.png", title: "KỆ UỐNG TRÀ", rate: 2, des: "(Size to, nâu đậm)", price: 8999999 },
-        { img: "sp4.png", title: "KỆ LIMITED", rate: 5, des: "(Size vừa, nâu đậm)", price: 100000000 },
-        { img: "sp5.png", title: "BÀN UỐNG NƯỚC", rate: 4, des: "(Size vừa, nâu đậm)", price: 1999999 },
-        { img: "sp6.png", title: "GIƯỜNG UỐNG TRÀ", rate: 5, des: "(Size vừa, vàng đậm)", price: 28999999 },
-        { img: "sp7.png", title: "BÀN KHÔNG NƯỚC", rate: 1, des: "(Size bé, nâu đậm)", price: 8999699 },
-        { img: "sp8.png", title: "BÀN UỐNG NƯỚC", rate: 3, des: "(Size vừa, nâu đậm)", price: 8989999 },
-        { img: "sp9.png", title: "GHẾ UỐNG TRÀ 2", rate: 3, des: "(Size vừa, nâu đậm)", price: 12999999 },
-        { img: "sp10.png", title: "BÀN KHÔNG NƯỚC 2", rate: 3, des: "(Size vừa, nâu đậm)", price: 8999999 },
-        { img: "sp11.png", title: "BÀN UỐNG NƯỚC 2", rate: 3, des: "(Size vừa, nâu đậm)", price: 1999999 },
-        { img: "sp12.png", title: "A UỐNG NƯỚC 2", rate: 4, des: "(Size vừa, nâu đậm)", price: 18999999 },
-        { img: "sp1.png", title: "BÀN KHÔNG TRÀ 2", rate: 3, des: "(Size vừa, tím đậm)", price: 8999999 },
-        { img: "sp2.png", title: "BÀN UỐNG NƯỚC 2", rate: 4, des: "(Size vừa, nâu đậm)", price: 14999999 },
-        { img: "sp3.png", title: "BÀN UỐNG NƯỚC 2", rate: 5, des: "(Size lớn, nâu đậm)", price: 8939999 },
-        { img: "sp4.png", title: "KỆ UỐNG NƯỚC 2", rate: 3, des: "(Size vừa, đen đậm)", price: 48999999 },
-        { img: "sp5.png", title: "BÀN KHÔNG TRÀ 3", rate: 3, des: "(Size vừa, nâu đậm)", price: 8999999 },
-        { img: "sp6.png", title: "BÀN UỐNG NƯỚC 3", rate: 3, des: "(Size vừa, nâu đậm)", price: 4999699 },
-        { img: "sp7.png", title: "TỦ KHÔNG NƯỚC 3", rate: 1, des: "(Size vừa, hồng đậm)", price: 58999999 },
-        { img: "sp8.png", title: "BÀN UỐNG NƯỚC 3", rate: 2, des: "(Size vừa, nâu đậm)", price: 8999999 },
+        { img: ["sp1.png", "sp2.png", "sp3.png", "sp4.png", "sp5.png"], title: "BÀN UỐNG NƯỚC", rate: 5, des: "(Size vừa, nâu đậm)", price: 1000000 },
+        { img: ["sp2.png", "sp2.png", "sp3.png", "sp4.png", "sp5.png"], title: "BÀN TI VI", rate: 5, des: "(Size vừa, xanh đậm)", price: 18999999 },
+        { img: ["sp3.png", "sp2.png", "sp3.png", "sp4.png", "sp5.png"], title: "KỆ UỐNG TRÀ", rate: 2, des: "(Size to, nâu đậm)", price: 8999999 },
+        { img: ["sp4.png", "sp2.png", "sp3.png", "sp4.png", "sp5.png"], title: "KỆ LIMITED", rate: 5, des: "(Size vừa, nâu đậm)", price: 100000000 },
+        { img: ["sp5.png", "sp2.png", "sp3.png", "sp4.png", "sp5.png"], title: "BÀN UỐNG NƯỚC", rate: 4, des: "(Size vừa, nâu đậm)", price: 1999999 },
+        { img: ["sp6.png", "sp2.png", "sp3.png", "sp4.png", "sp5.png"], title: "GIƯỜNG UỐNG TRÀ", rate: 5, des: "(Size vừa, vàng đậm)", price: 28999999 },
+        { img: ["sp7.png", "sp2.png", "sp3.png", "sp4.png", "sp5.png"], title: "BÀN KHÔNG NƯỚC", rate: 1, des: "(Size bé, nâu đậm)", price: 8999699 },
+        { img: ["sp8.png", "sp2.png", "sp3.png", "sp4.png", "sp5.png"], title: "BÀN UỐNG NƯỚC", rate: 3, des: "(Size vừa, nâu đậm)", price: 8989999 },
+        { img: ["sp9.png", "sp2.png", "sp3.png", "sp4.png", "sp5.png"], title: "GHẾ UỐNG TRÀ 2", rate: 3, des: "(Size vừa, nâu đậm)", price: 12999999 },
+        { img: ["sp10.png", "sp2.png", "sp3.png", "sp4.png", "sp5.png"], title: "BÀN KHÔNG NƯỚC 2", rate: 3, des: "(Size vừa, nâu đậm)", price: 8999999 },
+        { img: ["sp11.png", "sp2.png", "sp3.png", "sp4.png", "sp5.png"], title: "BÀN UỐNG NƯỚC 2", rate: 3, des: "(Size vừa, nâu đậm)", price: 1999999 },
+        { img: ["sp12.png", "sp2.png", "sp3.png", "sp4.png", "sp5.png"], title: "A UỐNG NƯỚC 2", rate: 4, des: "(Size vừa, nâu đậm)", price: 18999999 },
+        { img: ["sp1.png", "sp2.png", "sp3.png", "sp4.png", "sp5.png"], title: "BÀN KHÔNG TRÀ 2", rate: 3, des: "(Size vừa, tím đậm)", price: 8999999 },
+        { img: ["sp2.png", "sp2.png", "sp3.png", "sp4.png", "sp5.png"], title: "BÀN UỐNG NƯỚC 2", rate: 4, des: "(Size vừa, nâu đậm)", price: 14999999 },
+        { img: ["sp3.png", "sp2.png", "sp3.png", "sp4.png", "sp5.png"], title: "BÀN UỐNG NƯỚC 2", rate: 5, des: "(Size lớn, nâu đậm)", price: 8939999 },
+        { img: ["sp4.png", "sp2.png", "sp3.png", "sp4.png", "sp5.png"], title: "KỆ UỐNG NƯỚC 2", rate: 3, des: "(Size vừa, đen đậm)", price: 48999999 },
+        { img: ["sp5.png", "sp2.png", "sp3.png", "sp4.png", "sp5.png"], title: "BÀN KHÔNG TRÀ 3", rate: 3, des: "(Size vừa, nâu đậm)", price: 8999999 },
+        { img: ["sp6.png", "sp2.png", "sp3.png", "sp4.png", "sp5.png"], title: "BÀN UỐNG NƯỚC 3", rate: 3, des: "(Size vừa, nâu đậm)", price: 4999699 },
+        { img: ["sp7.png", "sp2.png", "sp3.png", "sp4.png", "sp5.png"], title: "TỦ KHÔNG NƯỚC 3", rate: 1, des: "(Size vừa, hồng đậm)", price: 58999999 },
+        { img: ["sp8.png", "sp2.png", "sp3.png", "sp4.png", "sp5.png"], title: "BÀN UỐNG NƯỚC 3", rate: 2, des: "(Size vừa, nâu đậm)", price: 8999999 },
     ]
 
 
@@ -54,7 +54,7 @@ $(document).ready(function () {
             }
             html += `<div class="col-md-3 col-sm-6 mt-4 parent-modal" data-bs-toggle="modal" data-bs-target="#exampleModal" data-id="${i}">
                             <div class="card">
-                                <img src="../images/xemtatca_sanpham/${list[i].img}" class="card-img-top" alt="">
+                                <img src="../images/xemtatca_sanpham/${list[i].img[0]}" class="card-img-top" alt="">
                                 <div class="card-body text-center">
                                     <h5 class="card-title text-blue">${list[i].title}</h5>
                                     <div class="star ">
@@ -75,6 +75,8 @@ $(document).ready(function () {
             var a = $(this).data("id");
             console.log(listPageProduct)
             renderModal(listPageProduct[a])
+            // $('.slider-for').slick('refresh');
+            // $('.slider-nav').slick('refresh');
         })
     }
 
@@ -161,40 +163,40 @@ $(document).ready(function () {
             htmlStar += `<i class="fa-solid fa-star text-gold"></i>`
         }
         var div = `<div class="product-title text-blue h2">${a.title}</div>
-                        <div class="product-info d-flex">
+                        <div class="product-info d-flex mb-4">
                             <div class="product-slide" style="width: 60%;">
                                 <div class="slider-for">
                                     <div class="img-box">
-                                        <img class="w-100" style="height: 25rem" src="../images/xemtatca_sanpham/${a.img}" alt="">
+                                        <img class="w-100" style="height: 25rem" src="../images/xemtatca_sanpham/${a.img[0]}" alt="">
                                     </div>
                                     <div class="img-box">
-                                        <img class="w-100" src="../images/xemtatca_sanpham/ban-uong-nuoc-2.png" alt="">
+                                        <img class="w-100" style="height: 25rem" src="../images/xemtatca_sanpham/${a.img[1]}" alt="">
                                     </div>
                                     <div class="img-box">
-                                        <img class="w-100" src="../images/xemtatca_sanpham/ban-uong-nuoc-3.png" alt="">
+                                        <img class="w-100" style="height: 25rem" src="../images/xemtatca_sanpham/${a.img[2]}" alt="">
                                     </div>
                                     <div class="img-box">
-                                        <img class="w-100" src="../images/xemtatca_sanpham/ban-uong-nuoc-4.png" alt="">
+                                        <img class="w-100" style="height: 25rem" src="../images/xemtatca_sanpham/${a.img[3]}" alt="">
                                     </div>
                                     <div class="img-box">
-                                        <img class="w-100" src="../images/xemtatca_sanpham/ban-uong-nuoc-2.png" alt="">
+                                        <img class="w-100" style="height: 25rem" src="../images/xemtatca_sanpham/${a.img[4]}" alt="">
                                     </div>
                                 </div>
                                 <div class="slider-nav mt-3">
                                     <div class="img-box me-2">
-                                        <img class="w-100" style="height: 6rem" src="../images/xemtatca_sanpham/${a.img}" alt="">
+                                        <img class="w-100" style="height: 6rem" src="../images/xemtatca_sanpham/${a.img[0]}" alt="">
                                     </div>
                                     <div class="img-box me-2">
-                                        <img src="../images/xemtatca_sanpham/ban-uong-nuoc-2.png" alt="">
+                                        <img class="w-100" style="height: 6rem" src="../images/xemtatca_sanpham/${a.img[1]}" alt="">
                                     </div>
                                     <div class="img-box me-2">
-                                        <img src="../images/xemtatca_sanpham/ban-uong-nuoc-3.png" alt="">
+                                        <img class="w-100" style="height: 6rem" src="../images/xemtatca_sanpham/${a.img[2]}" alt="">
                                     </div>
                                     <div class="img-box me-2">
-                                        <img src="../images/xemtatca_sanpham/ban-uong-nuoc-4.png" alt="">
+                                        <img class="w-100" style="height: 6rem" src="../images/xemtatca_sanpham/${a.img[3]}" alt="">
                                     </div>
                                     <div class="img-box me-2">
-                                        <img src="../images/xemtatca_sanpham/ban-uong-nuoc-2.png" alt="">
+                                        <img class="w-100" style="height: 6rem" src="../images/xemtatca_sanpham/${a.img[4]}" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -240,10 +242,11 @@ $(document).ready(function () {
             slidesToShow: 4,
             slidesToScroll: 1,
             asNavFor: '.slider-for',
-            dots: true,
+            dots: false,
             focusOnSelect: true,
             arrows: false
         });
+
     }
     listPageProduct = listProduct2.slice((currentPage - 1) * perPage, currentPage * perPage);
     render(listPageProduct);
