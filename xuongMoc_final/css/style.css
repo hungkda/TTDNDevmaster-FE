@@ -94,6 +94,9 @@ header .navbar .navbar-menu .menu-item:hover::after {
     margin-top: 5rem !important;
 }
 
+.p-7rem{
+    padding: 7rem;
+}
 .w-80 {
     width: 80% !important;
 }
@@ -199,6 +202,34 @@ header .navbar .navbar-menu .menu-item:hover::after {
 #introdution .content .item-mission {
     border: 4px solid #bd945f;
 }
+
+/* products.html*/
+/* products banner*/
+#products .banner .img-banner {
+    position: relative;
+}
+
+#products .banner .btn-buy {
+    position: absolute;
+    right: 20%;
+    bottom: 38%;
+}
+
+/* products main-products*/
+.title-products {
+    font-family: 'font-ultra';
+    position: relative;
+}
+
+.title-products::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    height: 0.5rem;
+    width: 60%;
+    background-color: #bd945f;
+}
 /* all-products.html*/
 /* all-products banner*/
 #all-products .banner .img-banner {
@@ -250,6 +281,43 @@ header .navbar .navbar-menu .menu-item:hover::after {
     border-bottom: 3px solid #343659;
 }
 
+/* partner.html*/
+/* partner banner*/
+#partner #banner-doitac {
+    background-image: url('../images/doi-tac/banner.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40rem;
+    z-index: 1;
+    position: relative;
+}
+
+#partner #content {
+    margin-top: -3rem;
+}
+
+#contact #banner-lienhe {
+    background-image: url('../images/lien-he/banner.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40rem;
+    z-index: 1;
+    position: relative;
+}
+
+#contact .form {
+    margin-top: -3rem;
+}
 /* footer */
 footer {
     margin-top: auto;
@@ -330,7 +398,7 @@ footer .contact li:last-child {
 
     header .responsive-menu .selected::after,
     header .responsive-menu .navbar-menu .menu-item:hover::after {
-        height: 1px;
+        height: 0;
         background-color: #f3f3f3;
     }
 }
